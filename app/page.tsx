@@ -1,4 +1,6 @@
-import 'app/styles.css';
+import "app/styles.css";
+
+import React from "react";
 
 export default function Home() {
   return (
@@ -9,4 +11,3 @@ export default function Home() {
     </>
   );
 }
-
