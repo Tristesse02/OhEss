@@ -1,5 +1,4 @@
-import Image from "next/image";
-import './styles.css';
+import 'app/styles.css';
 
 export default function Home() {
   return (
@@ -10,3 +9,4 @@ export default function Home() {
     </>
   );
 }
+
