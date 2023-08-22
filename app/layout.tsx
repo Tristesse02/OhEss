@@ -4,9 +4,10 @@ import React from "react";
 
 import type { Metadata } from "next";
 
-import { Inter } from "next/font/google";
+// [EN]: if we want to use next/font/google, we have to delete .babelrc (part of the configuration)
+// import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Operating System using TS",
@@ -20,7 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      {/* <body className={inter.className}>{children}</body> */}
+      <body>{children}</body>
     </html>
   );
 }
