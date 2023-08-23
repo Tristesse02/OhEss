@@ -4,13 +4,14 @@
   "description": "Desktop environment in the browser.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "eslint": "eslint .",
     "lint": "next lint",
-    "test": "jest --config=jest.config.js",
+    "eslint": "eslint .",
+    "start": "next start",
+    "build": "next build",
+    "prepare": "husky install",
     "test:watch": "jest --watch",
-    "prepare": "husky install"
+    "stylelint": "stylelint **/*.tsx",
+    "test": "jest --config=jest.config.js"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,7 @@
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.66.1",
+    "styled-components": "^6.0.7",
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
@@ -43,15 +44,19 @@
     "@testing-library/jest-dom": "^6.0.1",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.3",
+    "@types/styled-components": "^5.1.26",
     "@types/testing-library__jest-dom": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
     "babel-jest": "^29.6.3",
+    "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard-with-typescript": "^38.0.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jest": "^27.2.3",
     "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
@@ -62,10 +67,16 @@
     "jest-environment-jsdom": "^29.6.3",
     "jsdom": "^22.1.0",
     "node-sass": "^9.0.0",
+    "prettier": "^3.0.2",
+    "stylelint": "^15.10.3",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   },
   "lint-staged": {
-    "*.js": "eslint --fix"
+    "*.js": "eslint --fix",
+    "*.tsx": "stylelint --fix"
   }
 }
