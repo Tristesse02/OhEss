@@ -1,8 +1,8 @@
-import { render } from "@testing-library/react";
+import React from "react";
 import Home from "app/page";
-import { ThemeProvider } from "styled-components";
 import defaultTheme from "themes/default.json";
-
+import { render, screen } from "@testing-library/react";
+import { ThemeProvider } from "styled-components";
 
 describe("ue", () => {
   test("vlbn oi", () => {
@@ -12,12 +12,12 @@ describe("ue", () => {
 
 describe("dadf", () => {
   test("renders index page", () => {
-    const { getByText } = render(
+    render(
       <ThemeProvider theme={defaultTheme}>
         <Home />
       </ThemeProvider>
     );
-    const elem = getByText("Hello World!");
+    const elem = screen.getByText("Hello World!");
 
     expect(elem).toBeInTheDocument();
   });

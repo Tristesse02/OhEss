@@ -9,7 +9,7 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
 `;
 
-export default function Home() {
+export default function Home(): React.JSX.Element {
   return (
     <>
       <Title>Hello World!</Title>

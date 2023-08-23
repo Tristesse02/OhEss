@@ -1,11 +1,8 @@
 "use client";
 import React from "react";
-
 import type { Metadata } from "next";
-
-import { ThemeProvider, createGlobalStyle } from "styled-components";
-
 import defaultTheme from "themes/default.json";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 // [EN]: if we want to use next/font/google, we have to delete .babelrc (part of the configuration)
 // import { Inter } from "next/font/google";
@@ -32,7 +29,7 @@ export default function RootLayout({
   children
 }: {
   children: React.ReactNode;
-}) {
+}): React.JSX.Element {
   return (
     <html lang="en">
       {/* <body className={inter.className}>{children}</body> */}
