@@ -1,13 +1,20 @@
-import "app/styles.scss";
-
+"use client";
 import React from "react";
+
+import styled from "styled-components";
+
+const Title = styled.h1`
+  font-size: 3.5em;
+  text-align: center;
+  color: #db7093;
+`;
 
 export default function Home() {
   return (
     <>
-      <h1 className="my-custom-heading text-4xl font-bold">Hello World!</h1>
-      <div>vlbnoi</div>
-      <p>sory?</p>
+      <Title>Hello World!</Title>
+      <div>Why u keep watching stories?</div>
+      <p>Go back and study :&lt;</p>
     </>
   );
 }
