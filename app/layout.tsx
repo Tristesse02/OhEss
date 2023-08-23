@@ -1,11 +1,11 @@
-'use client'
-import "app/globals.scss";
-
+"use client";
 import React from "react";
 
 import type { Metadata } from "next";
 
 import { ThemeProvider, createGlobalStyle } from "styled-components";
+
+import defaultTheme from "themes/default.json";
 
 // [EN]: if we want to use next/font/google, we have to delete .babelrc (part of the configuration)
 // import { Inter } from "next/font/google";
@@ -23,12 +23,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const theme = {
-  colors: {
-    primary: "#b155d2"
-  }
-};
-
 export const metadata: Metadata = {
   title: "OhEss",
   description: "Creating an OS using webpage"
@@ -43,7 +37,7 @@ export default function RootLayout({
     <html lang="en">
       {/* <body className={inter.className}>{children}</body> */}
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={defaultTheme}>
         <body>{children}</body>
       </ThemeProvider>
     </html>
