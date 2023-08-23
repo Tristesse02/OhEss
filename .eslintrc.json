@@ -10,7 +10,8 @@
     "eslint:recommended",
     "standard-with-typescript",
     "plugin:react/recommended",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -22,6 +23,7 @@
   "rules": {
     "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
     "@typescript-eslint/dot-notation": "error",
+    "semi": ["error", "always"],
     "@typescript-eslint/semi": "off",
     "no-unexpected-multiline": "error"
   }
