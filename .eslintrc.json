@@ -8,27 +8,37 @@
   },
   "extends": [
     "eslint:recommended",
+    "plugin:jest/recommended",
     "standard-with-typescript",
     "plugin:react/recommended",
-    "plugin:jest/recommended",
-    "plugin:prettier/recommended"
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:testing-library/react"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint", "jest", "react", "simple-import-sort", "prettier"],
-  "ignorePatterns": ["next.config.js", "postcss.config.js"],
+  "plugins": ["@typescript-eslint", "jest", "react", "simple-import-sort", "prettier", "testing-library", "jest-dom"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": ["next-env.d.ts"],
   "rules": {
-    "comma-dangle":["error", "never"],
-    "@typescript-eslint/comma-dangle": ["error"],
-    "@typescript-eslint/dot-notation": "error",
+    "endOfLine": "off",
+    "no-extra-semi": "error",
+    "no-unused-vars": "error",
     "semi": ["error", "always"],
     "@typescript-eslint/semi": "off",
+    "comma-dangle":["error", "never"],
     "no-unexpected-multiline": "error",
-    "no-unused-vars": "error",
-    "no-extra-semi": "error",
-    "endOfLine": "off"
+    "@typescript-eslint/consistent-type-imports": ["error", {"prefer": "type-imports"}],
+    "@typescript-eslint/dot-notation": "error",
+    "@typescript-eslint/comma-dangle": ["error"]
   }
 }
