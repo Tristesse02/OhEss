@@ -1,24 +1,12 @@
 "use client";
 import React from "react";
 import type { Metadata } from "next";
-import defaultTheme from "themes/default.json";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import StyledApp from "@/components/layout/StyledApp";
 
 // [EN]: if we want to use next/font/google, we have to delete .babelrc (part of the configuration)
 // import { Inter } from "next/font/google";
 
 // const inter = Inter({ subsets: ["latin"] });
-const GlobalStyle = createGlobalStyle`
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  * {
-    box-sizing: border-box
-  }
-`;
 
 export const metadata: Metadata = {
   title: "OhEss",
@@ -33,10 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <body className={inter.className}>{children}</body> */}
-      <GlobalStyle />
-      <ThemeProvider theme={defaultTheme}>
+      <StyledApp>
         <body>{children}</body>
-      </ThemeProvider>
+      </StyledApp>
     </html>
   );
 }
