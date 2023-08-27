@@ -13,6 +13,10 @@
     "test": "jest --config=jest.config.js",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.tsx": "stylelint --fix"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tristesse02/OhEss.git"
@@ -76,9 +80,5 @@
     "stylelint-config-styled-components": "^0.1.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
-  },
-  "lint-staged": {
-    "*.js": "eslint --fix",
-    "*.tsx": "stylelint --fix"
   }
 }
