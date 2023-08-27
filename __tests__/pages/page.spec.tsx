@@ -1,8 +1,8 @@
 import React from "react";
 import Home from "app/page";
-import defaultTheme from "themes/default.json";
-import { render, screen } from "@testing-library/react";
+import defaultTheme from "styles/theme.json";
 import { ThemeProvider } from "styled-components";
+import { render, screen } from "@testing-library/react";
 
 describe("ue", () => {
   test("vlbn oi", () => {
@@ -13,7 +13,7 @@ describe("ue", () => {
 describe("dadf", () => {
   test("renders index page", () => {
     render(
-      <ThemeProvider theme={defaultTheme}>
+      <ThemeProvider theme={defaultTheme.default}>
         <Home />
       </ThemeProvider>
     );
