@@ -2,16 +2,14 @@
 import React from "react";
 import type { Metadata } from "next";
 import StyledApp from "@/components/layout/StyledApp";
+import data from "@/components/layout/Metadata.json";
 
 // [EN]: if we want to use next/font/google, we have to delete .babelrc (part of the configuration)
 // import { Inter } from "next/font/google";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "OhEss",
-  description: "Creating an OS using webpage"
-};
+export const metadata: Metadata = data
 
 export default function RootLayout({
   children
