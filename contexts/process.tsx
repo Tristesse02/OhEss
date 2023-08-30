@@ -6,7 +6,7 @@ import { FC, createContext } from "react";
 const ProcessLoader: FC = () => (
   <>
     {Object.entries(processDirectory).map(([id, { Component }]) => (
-      <Component key={id} />
+      <Component key={id} /> // [EN]: we used to invoke by <processDirectory.HelloWorld.Component />
     ))}
   </>
 );
