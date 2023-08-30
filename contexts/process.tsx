@@ -1,4 +1,4 @@
-import processDirectory from "@/utils/processDirectory";
+import processDirectory from "utils/processDirectory";
 import { FC, createContext } from "react";
 
 // const ProcessContext = createContext({});
