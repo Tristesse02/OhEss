@@ -1,21 +1,16 @@
 import processDirectory from "utils/processDirectory";
-import { createContext, useMemo, useState } from "react";
+import { createContext } from "react";
 import { ProcessContextState } from "types/contexts/process";
+import useProcessContextState from "hooks/useProcessContextState";
 
 export const ProcessContext = createContext<ProcessContextState>({
   processes: {}
 });
 
-export const ProcessProvider = ({ children }: any) => {
-  const [processes] = useState(processDirectory);
-
-  const contextValue = useMemo(() => ({ processes }), [processes]);
-
-  return (
-    <ProcessContext.Provider value={contextValue}>
-      {children}
-    </ProcessContext.Provider>
-  );
-};
+export const ProcessProvider = ({ children }: any) => (
+  <ProcessContext.Provider value={useProcessContextState(processDirectory)}>
+    {children}
+  </ProcessContext.Provider>
+);
 
 export const ProcessConsumer = ProcessContext.Consumer;
