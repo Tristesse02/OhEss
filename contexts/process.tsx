@@ -1,9 +1,9 @@
 import processDirectory from "utils/processDirectory";
 import { createContext, useMemo, useState } from "react";
-import { Process } from "@/types/utils/processDirectory";
+import { Processes } from "@/types/utils/processDirectory";
 
 type ProcessContextState = {
-  processes: Partial<Process>;
+  processes: Processes;
 };
 export const ProcessContext = createContext<ProcessContextState>({
   processes: {}

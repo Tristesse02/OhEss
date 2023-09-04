@@ -1,5 +1,7 @@
-export type Process = {
-  Component: any; // [EN]: used to be "ComponentType"
+import { ComponentType } from 'react';
+
+type Process = {
+  Component: ComponentType; // [EN]: used to be "ComponentType"
 };
 
 export type Processes = {
