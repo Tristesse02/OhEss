@@ -1,14 +1,24 @@
 import processDirectory from "utils/processDirectory";
-import { FC, createContext } from "react";
+import { createContext, useMemo, useState } from "react";
+import { Process } from "@/types/utils/processDirectory";
 
-// const ProcessContext = createContext({});
+type ProcessContextState = {
+  processes: Partial<Process>;
+};
+export const ProcessContext = createContext<ProcessContextState>({
+  processes: {}
+});
 
-const ProcessLoader: FC = () => (
-  <>
-    {Object.entries(processDirectory).map(([id, { Component }]) => (
-      <Component key={id} /> // [EN]: we used to invoke by <processDirectory.HelloWorld.Component />
-    ))}
-  </>
-);
+export const ProcessProvider = ({ children }: any) => {
+  const [processes] = useState(processDirectory);
 
-export default ProcessLoader;
+  const contextValue = useMemo(() => ({ processes }), [processes]);
+
+  return (
+    <ProcessContext.Provider value={contextValue}>
+      {children}
+    </ProcessContext.Provider>
+  );
+};
+
+export const ProcessConsumer = ProcessContext.Consumer;
