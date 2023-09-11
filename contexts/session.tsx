@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import useSessionContextState from "@/hooks/useSessionContextState";
+import useSessionContextState from "hooks/useSessionContextState";
 
 export const SessionContext = createContext<any>({
   theme: undefined

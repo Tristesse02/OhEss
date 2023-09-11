@@ -1,6 +1,6 @@
 import GlobalStyle from "styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
-import { SessionConsumer } from "@/contexts/session";
+import { SessionConsumer } from "contexts/session";
 import themes from "styles/theme.json";
 
 const StyledApp = ({ children }: any) => (
