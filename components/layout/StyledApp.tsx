@@ -1,9 +1,10 @@
+import React from "react";
+import themes from "styles/theme.json";
 import GlobalStyle from "styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { SessionConsumer } from "contexts/session";
-import themes from "styles/theme.json";
 
-const StyledApp = ({ children }: any) => (
+const StyledApp = ({ children }: any): React.JSX.Element => (
   <>
     <GlobalStyle />
     <SessionConsumer>

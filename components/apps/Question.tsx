@@ -1,4 +1,5 @@
-import { FC } from "react";
+import React from "react";
+import type { FC } from "react";
 
 const Question: FC = () => <div>Why u keep watching stories?</div>;
 

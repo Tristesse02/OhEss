@@ -8,7 +8,7 @@ class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
-    return withServerStyleSheet(ctx);
+    return await withServerStyleSheet(ctx);
   }
 
   render(): ReactElement {
