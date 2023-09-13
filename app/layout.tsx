@@ -20,6 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <body className={inter.className}>{children}</body> */}
+      <head>
+        <title>{metadata.title as string}</title>
+        <meta name="description" content={metadata.description as string} />
+      </head>
       <SessionProvider>
         <StyledApp>
           <body>{children}</body>
