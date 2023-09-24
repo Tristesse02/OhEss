@@ -4,6 +4,7 @@ import Window from "components/system/Window";
 import { ProcessConsumer } from "contexts/process";
 
 // TODO: Add Lintingn rule to catch key required
+// Doesn't work behind condition
 
 const ProcessLoader: FC = () => (
   <ProcessConsumer>
