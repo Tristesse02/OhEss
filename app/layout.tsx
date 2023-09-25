@@ -10,7 +10,7 @@ import { SessionProvider } from "contexts/session";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = data;
+const metadata: Metadata = data;
 
 export default function RootLayout({
   children
