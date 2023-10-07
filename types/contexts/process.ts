@@ -1,6 +1,6 @@
 import { ComponentType } from 'react';
 
-type Process = {
+export type Process = {
   Component: ComponentType; // [EN]: used to be "ComponentType"
   hasWindow: boolean;
 };

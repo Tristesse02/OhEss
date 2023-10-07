@@ -1,24 +1,40 @@
 import React from "react";
 import type { FC } from "react";
-import Window from "components/system/Window";
 import { ProcessConsumer } from "contexts/process";
+import { Process } from "types/contexts/process";
+import dynamic from "next/dynamic";
 
 // TODO: Add Lintingn rule to catch key required
 // Doesn't work behind condition
 
+// const RenderProcesses: FC<{ processes: Processes }> = ({ processes }) => (
+//   <>
+//     {Object.entries(processes).map(([id, { Component, hasWindow }]) => (
+//       <RenderProcess
+//         key={id}
+//         Component={Component}
+//         hasWindow={hasWindow}
+//       />
+//     ))}
+//   </>
+// );
+
+const Window = dynamic(() => import("components/system/Window"));
+const RenderProcess: FC<Process> = ({ Component, hasWindow }) =>
+  hasWindow ? (
+    <Window>
+      <Component />
+    </Window>
+  ) : (
+    <Component />
+  ); // [EN]: we used to invoke by <processDirectory.HelloWorld.Component />
+
 const ProcessLoader: FC = () => (
   <ProcessConsumer>
     {({ processes }) =>
-      Object.entries(processes).map(
-        ([id, { Component, hasWindow }]) =>
-          hasWindow ? (
-            <Window key={id}>
-              <Component />
-            </Window>
-          ) : (
-            <Component key={id} />
-          ) // [EN]: we used to invoke by <processDirectory.HelloWorld.Component />
-      )
+      Object.entries(processes).map(([id, process]) => (
+        <RenderProcess key={id} {...process} />
+      ))
     }
   </ProcessConsumer>
 );
