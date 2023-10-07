@@ -7,18 +7,6 @@ import dynamic from "next/dynamic";
 // TODO: Add Lintingn rule to catch key required
 // Doesn't work behind condition
 
-// const RenderProcesses: FC<{ processes: Processes }> = ({ processes }) => (
-//   <>
-//     {Object.entries(processes).map(([id, { Component, hasWindow }]) => (
-//       <RenderProcess
-//         key={id}
-//         Component={Component}
-//         hasWindow={hasWindow}
-//       />
-//     ))}
-//   </>
-// );
-
 const Window = dynamic(() => import("components/system/Window"));
 const RenderProcess: FC<Process> = ({ Component, hasWindow }) =>
   hasWindow ? (
