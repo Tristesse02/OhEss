@@ -4,7 +4,7 @@
 
 ## Introduction:
 - Hello, it's Minh Vu
-- Project details will be announce soon
+- The aim of the project is to create a fully functional Operating System that has the interface mimicing Window 11 using mainly Typescript language, React, and NextJS framework.
 
 <!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
