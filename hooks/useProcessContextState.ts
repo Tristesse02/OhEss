@@ -1,4 +1,4 @@
-import { ProcessContextState, Processes } from 'types/contexts/process';
+import type { ProcessContextState, Processes } from 'types/contexts/process';
 import { useMemo, useState } from 'react';
 
 const useProcessContextState = (
