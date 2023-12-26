@@ -2,7 +2,7 @@
 
 // require('@testing-library/jest-dom'); // added the line in jest config.js
 
-const preloadAll = require('jest-next-dynamic');
+import preloadAll from 'jest-next-dynamic';
 
 beforeAll(async () => {
   await preloadAll();
