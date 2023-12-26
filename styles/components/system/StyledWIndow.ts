@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledWindow = styled.section`
   background-color: ${({ theme }) => theme.colors.window};

@@ -1,5 +1,5 @@
-import { DefaultTheme } from 'styled-components/dist/types';
+import type { DefaultTheme } from 'styled-components/dist/types';
 
-export type SessionContextState = {
+export interface SessionContextState {
   theme?: DefaultTheme;
-};
+}

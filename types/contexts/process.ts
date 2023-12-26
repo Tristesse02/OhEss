@@ -1,14 +1,12 @@
-import { ComponentType } from 'react';
+import type { ComponentType } from 'react';
 
-export type Process = {
+export interface Process {
   Component: ComponentType; // [EN]: used to be "ComponentType"
   hasWindow: boolean;
-};
+}
 
-export type Processes = {
-  [id: string]: Process;
-};
+export type Processes = Record<string, Process>;
 
-export type ProcessContextState = {
+export interface ProcessContextState {
   processes: Processes;
-};
+}
