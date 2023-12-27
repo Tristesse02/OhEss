@@ -2,7 +2,7 @@ import processDirectory from "utils/processDirectory";
 import { createContext } from "react";
 import type { ProcessContextState } from "types/contexts/process";
 import useProcessContextState from "hooks/useProcessContextState";
-import { initialProcessContextState } from "@/utils/initialContextStates";
+import { initialProcessContextState } from "utils/initialContextStates";
 
 export const ProcessContext = createContext<ProcessContextState>(
   initialProcessContextState
