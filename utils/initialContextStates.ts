@@ -3,10 +3,10 @@ export const initialProcessContextState = {
 };
 
 export const initialSessionContextState = {
-  theme: {
-    colors: {
-      primary: '',
-      window: ''
-    }
-  }
+  // theme: {
+  //   colors: {
+  //     primary: '',
+  //     window: ''
+  //   }
+  // }
 };
