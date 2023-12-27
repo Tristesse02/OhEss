@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import useSessionContextState from "hooks/useSessionContextState";
-import { initialSessionContextState } from "@/utils/initialContextStates";
+import { initialSessionContextState } from "utils/initialContextStates";
 
 export const SessionContext = createContext<any>(initialSessionContextState);
 
