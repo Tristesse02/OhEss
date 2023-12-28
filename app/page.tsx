@@ -1,11 +1,12 @@
 "use client";
-import ProcessLoader from "components/system/ProcessLoader";
-import { ProcessProvider } from "contexts/process";
 import React from "react";
+import { ProcessProvider } from "contexts/process";
+import ProcessLoader from "components/system/ProcessLoader";
+import { getStartupProcesses } from "utils/processDirectory";
 
 const Home = (): React.JSX.Element => {
   return (
-    <ProcessProvider>
+    <ProcessProvider startupProcesses={getStartupProcesses()}>
       <ProcessLoader />
     </ProcessProvider>
   );

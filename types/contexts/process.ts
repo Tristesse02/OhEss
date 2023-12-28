@@ -10,3 +10,8 @@ export type Processes = Record<string, Process>;
 export interface ProcessContextState {
   processes: Processes;
 }
+
+export interface ProcessProviderProps {
+  children: React.ReactNode;
+  startupProcesses: Processes;
+}

@@ -1,5 +1,7 @@
-import { Processes } from 'types/contexts/process';
 import dynamic from 'next/dynamic';
+import { Processes } from 'types/contexts/process';
+
+const STARTUP_PROCESSES: string[] = ['HelloWorld'];
 
 const processDirectory: Processes = {
   HelloWorld: {
@@ -16,4 +18,13 @@ const processDirectory: Processes = {
   }
 };
 
-export default processDirectory;
+export const getStartupProcesses = (): Processes =>
+  STARTUP_PROCESSES.reduce(
+    (acc, id) => ({
+      ...acc,
+      [id]: processDirectory[id] // [id] because if just id, it will be understand as a string literal
+    }),
+    {}
+  );
+
+// export default processDirectory;
