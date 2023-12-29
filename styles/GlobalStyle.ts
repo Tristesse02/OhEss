@@ -1,14 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  html,
-  body {
+  * {
+    border: 0;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-
-  * {
-    box-sizing: border-box
+    outline: 0;
   }
 `;
 
