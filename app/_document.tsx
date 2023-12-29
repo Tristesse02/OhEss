@@ -1,7 +1,4 @@
-import React from "react";
-import type { ReactElement } from "react";
 import withServerStyleSheet from "utils/withServerStyleSheet";
-import Document, { Head, Html, Main, NextScript } from "next/document";
 import type { DocumentContext, DocumentInitialProps } from "next/document";
 
 class MyDocument extends Document {
