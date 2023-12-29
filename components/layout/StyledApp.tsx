@@ -3,7 +3,7 @@ import React from "react";
 import GlobalStyle from "styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { SessionConsumer } from "contexts/session";
-import type { StyledAppProps } from "@/types/components/pages/StyledApp";
+import type { StyledAppProps } from "types/components/pages/StyledApp";
 
 const StyledApp: FC<StyledAppProps> = ({
   children,

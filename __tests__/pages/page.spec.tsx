@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "app/page";
+import themes from "styles/theme.json";
 import StyledApp from "components/layout/StyledApp";
 import { render, screen } from "@testing-library/react";
 
@@ -12,7 +13,7 @@ describe("ue", () => {
 describe("dadf", () => {
   test("renders index page", () => {
     render(
-      <StyledApp>
+      <StyledApp currentTheme={themes.default}>
         <Home />
       </StyledApp>
     );
