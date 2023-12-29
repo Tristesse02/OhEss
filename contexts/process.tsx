@@ -6,7 +6,7 @@ import type {
   ProcessProviderProps
 } from "types/contexts/process";
 
-export const ProcessContext = createContext<ProcessContextState>(
+export const { Consumer, Provider } = createContext<ProcessContextState>(
   initialProcessContextState
 );
 
@@ -16,9 +16,9 @@ export const ProcessProvider: FC<ProcessProviderProps> = ({
   startupProcesses
 }) => (
   // eslint-disable-next-line react/react-in-jsx-scope
-  <ProcessContext.Provider value={useProcessContextState(startupProcesses)}>
+  <Provider value={useProcessContextState(startupProcesses)}>
     {children}
-  </ProcessContext.Provider>
+  </Provider>
 );
 
-export const ProcessConsumer = ProcessContext.Consumer;
+export const ProcessConsumer = Consumer;
