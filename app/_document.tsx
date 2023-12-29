@@ -10,18 +10,6 @@ class MyDocument extends Document {
   ): Promise<DocumentInitialProps> {
     return await withServerStyleSheet(ctx);
   }
-
-  render(): ReactElement {
-    return (
-      <Html lang="en">
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
 }
 
 export default MyDocument;
