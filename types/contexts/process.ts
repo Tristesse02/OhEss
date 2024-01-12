@@ -13,5 +13,4 @@ export interface ProcessContextState {
 
 export interface ProcessProviderProps {
   children: React.ReactNode;
-  startupProcesses: Processes;
 }

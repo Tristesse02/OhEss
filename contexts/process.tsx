@@ -12,13 +12,10 @@ export const { Consumer, Provider } = createContext<ProcessContextState>(
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const ProcessProvider: React.FC<ProcessProviderProps> = ({
-  children,
-  startupProcesses
+  children
 }) => (
   // eslint-disable-next-line react/react-in-jsx-scope
-  <Provider value={useProcessContextState(startupProcesses)}>
-    {children}
-  </Provider>
+  <Provider value={useProcessContextState()}>{children}</Provider>
 );
 
 export const ProcessConsumer = Consumer;
