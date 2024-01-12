@@ -1,5 +1,5 @@
-import { ProcessContextState } from 'types/contexts/process';
-import { SessionContextState } from 'types/contexts/session';
+import type { ProcessContextState } from 'types/contexts/process';
+import type { SessionContextState } from 'types/contexts/session';
 
 export const initialProcessContextState: ProcessContextState = {
   processes: {}

@@ -1,5 +1,6 @@
+import React from "react";
 import dynamic from "next/dynamic";
-import { Process } from "types/contexts/process";
+import type { Process } from "types/contexts/process";
 
 // eslint-disable-next-line @typescript-eslint/promise-function-async
 const Window = dynamic(() => import("components/system/Window"));

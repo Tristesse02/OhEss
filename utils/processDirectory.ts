@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/promise-function-async */
 import dynamic from 'next/dynamic';
-import { Processes } from 'types/contexts/process';
+import type { Processes } from 'types/contexts/process';
 
 const STARTUP_PROCESSES: string[] = ['HelloWorld'];
 

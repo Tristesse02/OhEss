@@ -1,5 +1,3 @@
-import { DefaultTheme } from 'styled-components/dist/types';
+import type { DefaultTheme } from 'styled-components/dist/types';
 
-export type Themes = {
-  [key: string]: DefaultTheme;
-};
+export type Themes = Record<string, DefaultTheme>;
