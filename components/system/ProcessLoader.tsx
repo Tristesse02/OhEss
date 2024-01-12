@@ -1,8 +1,7 @@
 import React from "react";
-import type { FC } from "react";
+import dynamic from "next/dynamic";
 import { ProcessConsumer } from "contexts/process";
 import type { Process } from "types/contexts/process";
-import dynamic from "next/dynamic";
 
 // TODO: Add Lintingn rule to catch key required
 // Doesn't work behind condition
@@ -16,7 +15,7 @@ const Window = dynamic(() => import("components/system/Window"));
  * @param param0 .
  * @returns .
  */
-const RenderProcess: FC<Process> = ({ Component, hasWindow }) =>
+const RenderProcess: React.FC<Process> = ({ Component, hasWindow }) =>
   hasWindow ? (
     <Window>
       <Component />
@@ -25,7 +24,7 @@ const RenderProcess: FC<Process> = ({ Component, hasWindow }) =>
     <Component />
   ); // [EN]: we used to invoke by <processDirectory.HelloWorld.Component />
 
-const ProcessLoader: FC = () => (
+const ProcessLoader: React.FC = () => (
   <ProcessConsumer>
     {({ processes }) =>
       Object.entries(processes).map(([id, process]) => (

@@ -1,6 +1,5 @@
 import React from "react";
 import Home from "app/page";
-import themes from "styles/theme";
 import StyledApp from "components/layout/StyledApp";
 import { render, screen } from "@testing-library/react";
 

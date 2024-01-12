@@ -1,4 +1,4 @@
-import { FC, createContext } from "react";
+import { createContext } from "react";
 import useProcessContextState from "hooks/useProcessContextState";
 import { initialProcessContextState } from "utils/initialContextStates";
 import type {
@@ -11,7 +11,7 @@ export const { Consumer, Provider } = createContext<ProcessContextState>(
 );
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export const ProcessProvider: FC<ProcessProviderProps> = ({
+export const ProcessProvider: React.FC<ProcessProviderProps> = ({
   children,
   startupProcesses
 }) => (
