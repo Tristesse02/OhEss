@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import type { Metadata } from "next";
-import themes from "styles/theme.json";
-import data from "components/layout/Metadata.json";
+import Metadata from "components/layout/Metadata";
 import { SessionProvider } from "contexts/session";
 import StyledApp from "components/layout/StyledApp";
 
@@ -10,8 +8,6 @@ import StyledApp from "components/layout/StyledApp";
 // import { Inter } from "next/font/google";
 
 // const inter = Inter({ subsets: ["latin"] });
-
-const metadata: Metadata = data;
 
 export default function RootLayout({
   children
@@ -21,12 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <body className={inter.className}>{children}</body> */}
-      <head>
-        <title>{metadata.title as string}</title>
-        <meta name="description" content={metadata.description as string} />
-      </head>
+      <Metadata />
       <SessionProvider>
-        <StyledApp currentTheme={themes.default}>
+        <StyledApp>
           <body>{children}</body>
         </StyledApp>
       </SessionProvider>

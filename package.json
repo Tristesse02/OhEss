@@ -1,7 +1,8 @@
 {
   "name": "ohess",
+  "title": "OhEss",
+  "description": "Desktop environment in the browser. Creating an OS using Typescript, React, and Nextjs",
   "version": "1.0.0",
-  "description": "Desktop environment in the browser.",
   "scripts": {
     "dev": "next dev",
     "lint": "next lint",
