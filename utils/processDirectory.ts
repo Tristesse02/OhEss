@@ -20,9 +20,9 @@ const processDirectory: Processes = {
 
 export const getStartupProcesses = (): Processes =>
   STARTUP_PROCESSES.reduce(
-    (acc, id) => ({
-      ...acc,
-      [id]: processDirectory[id] // [id] because if just id, it will be understand as a string literal
+    (processes, processId) => ({
+      ...processes,
+      [processId]: processDirectory[processId] // [id] because if just id, it will be understand as a string literal
     }),
     {}
   );
