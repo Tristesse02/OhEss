@@ -7,17 +7,15 @@ import { SessionConsumer } from "contexts/session";
 import type { StyledAppProps } from "types/components/pages/StyledApp";
 
 const StyledApp: FC<StyledAppProps> = ({ children }): React.JSX.Element => (
-  <>
-    <GlobalStyle />
-    <SessionConsumer>
-      {({ themeName }) => (
-        /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
-        <ThemeProvider theme={themes[themeName] || themes.defaultTheme}>
-          {children}
-        </ThemeProvider>
-      )}
-    </SessionConsumer>
-  </>
+  <SessionConsumer>
+    {({ themeName }) => (
+      /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
+      <ThemeProvider theme={themes[themeName] || themes.defaultTheme}>
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
+    )}
+  </SessionConsumer>
 );
 
 export default StyledApp;
