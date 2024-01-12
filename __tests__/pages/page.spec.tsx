@@ -13,7 +13,7 @@ describe("ue", () => {
 describe("dadf", () => {
   test("renders index page", () => {
     render(
-      <StyledApp currentTheme={themes.default}>
+      <StyledApp>
         <Home />
       </StyledApp>
     );
