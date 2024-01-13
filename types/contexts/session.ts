@@ -4,3 +4,7 @@ export interface SessionContextState {
   themeName: string;
   setThemeName: Dispatch<SetStateAction<string>>;
 }
+
+export interface SessionProviderProps {
+  children: React.ReactNode;
+}

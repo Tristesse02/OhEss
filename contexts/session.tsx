@@ -1,15 +1,11 @@
-import { createContext } from "react";
+import { contextFactory } from "./contextFactory";
 import useSessionContextState from "hooks/useSessionContextState";
+import type { SessionContextState } from "types/contexts/session";
 import { initialSessionContextState } from "utils/initialContextStates";
 
-export const { Consumer, Provider } = createContext<any>(
-  initialSessionContextState
+const { Consumer, Provider } = contextFactory<SessionContextState>(
+  initialSessionContextState,
+  useSessionContextState
 );
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export const SessionProvider = ({ children }: any) => (
-  // eslint-disable-next-line react/react-in-jsx-scope
-  <Provider value={useSessionContextState()}>{children}</Provider>
-);
-
-export const SessionConsumer = Consumer;
+export { Consumer as SessionConsumer, Provider as SessionProvider };
