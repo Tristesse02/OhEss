@@ -1,4 +1,5 @@
 // This is like the extension from the styled-components file (OOP)
+import { WallpaperEffect } from 'types/styles/wallpaper';
 import 'styled-components';
 
 declare module 'styled-components' {
@@ -7,6 +8,7 @@ declare module 'styled-components' {
       backgroundColor: string;
       primary: string;
       window: string;
-    };
+    },
+    wallpaper: WallpaperEffect;
   }
 }
