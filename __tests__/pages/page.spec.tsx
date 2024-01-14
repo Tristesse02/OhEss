@@ -3,8 +3,6 @@ import Home from "app/page";
 import StyledApp from "components/layout/StyledApp";
 import { render, screen } from "@testing-library/react";
 
-import vantaCloud from 'utils/VantaCloud';
-
 jest.mock('utils/VantaCloud', () => {
   return jest.fn(() => () => ({
     current: () => {
