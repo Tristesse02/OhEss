@@ -2,7 +2,7 @@ import type { ComponentType } from 'react';
 
 export interface Process {
   Component: ComponentType; // [EN]: used to be "ComponentType"
-  hasWindow: boolean;
+  hasWindow?: boolean;
 }
 
 export type Processes = Record<string, Process>;

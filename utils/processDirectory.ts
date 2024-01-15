@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic';
 import type { Processes } from 'types/contexts/process';
 
-const STARTUP_PROCESSES: string[] = ['HelloWorld'];
+const STARTUP_PROCESSES: string[] = ['Taskbar'];
 
 const processDirectory: Processes = {
   HelloWorld: {
@@ -16,6 +16,9 @@ const processDirectory: Processes = {
   Question: {
     Component: dynamic(() => import('components/apps/Question')),
     hasWindow: true
+  },
+  Taskbar: {
+    Component: dynamic(() => import('components/system/Taskbar')),
   }
 };
 
