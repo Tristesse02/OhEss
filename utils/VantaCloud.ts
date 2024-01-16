@@ -7,13 +7,18 @@ const disableControl = {
   mouseControls: false,
   touchControls: false
 };
+
+const isWebGLAvailable = typeof WebGLRenderingContext !== 'undefined';
+
 const vantaCloud = (setting: VantaSettings): WallpaperEffect => (desktopRef: React.RefObject<HTMLElement>) => {
-    const vantaEffect = CLOUDS({
+    const vantaEffect = isWebGLAvailable
+    ? CLOUDS({
       el: desktopRef.current,
       THREE,
       ...disableControl,
       ...setting
-    });
+    })
+    : "undefined";
 
     return () => {
       vantaEffect?.destroy?.();
