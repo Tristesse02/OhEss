@@ -12,15 +12,16 @@ const isWebGLAvailable = typeof WebGLRenderingContext !== 'undefined';
 
 const vantaCloud =
   (setting: VantaSettings): WallpaperEffect =>
-  (desktopRef: React.RefObject<HTMLElement>) => {
-    const vantaEffect = isWebGLAvailable
-      ? CLOUDS({
-          el: desktopRef.current,
-          THREE,
-          ...disableControl,
-          ...setting
-        })
-      : 'undefined';
+  (element) => {
+    const vantaEffect =
+      element && isWebGLAvailable
+        ? CLOUDS({
+            el: element,
+            THREE,
+            ...disableControl,
+            ...setting
+          })
+        : 'undefined';
 
     return () => {
       vantaEffect?.destroy?.();

@@ -5,6 +5,4 @@ export interface VantaSettings {
   lowlightColor: number;
 }
 
-export type WallpaperEffect = (
-  desktopRef: React.RefObject<HTMLElement>
-) => () => void;
+export type WallpaperEffect = (element: HTMLElement | null) => () => void;
