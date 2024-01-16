@@ -1,5 +1,6 @@
 import vantaCloud from 'utils/VantaCloud';
 import type { Themes } from 'types/styles/themes';
+import type { VantaSettings } from 'types/styles/wallpaper';
 
 const backgroundChoices = {
   nature_inspired: [0xffebeb, 0xbab86c, 0x8a3324, 0x228b22],
@@ -18,14 +19,18 @@ const backgroundChoices = {
   dreamy_spectrum: [0xd8bfd8, 0xff69b4, 0xb0e0e6, 0x483d8b],
   pastel_serenity: [0xfadadd, 0xe29cd2, 0x89cff0, 0x301934]
 };
-function getBackgroundColors(backgroundChoices: any, backgroundName: string) {
+function getBackgroundColors(
+  backgroundChoices: any,
+  backgroundName: string
+): VantaSettings {
   const val = backgroundChoices[backgroundName];
-  return {
+  const ret = {
     baseColor: val[0],
     highlightColor: val[1],
     midtoneColor: val[2],
     lowlightColor: val[3]
   };
+  return ret as VantaSettings;
 }
 const defaultTheme = {
   colors: {

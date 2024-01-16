@@ -11,13 +11,17 @@ const Window = dynamic(() => import("components/system/Window"));
  * @param param0 .
  * @returns .
  */
-const RenderProcess: React.FC<Process> = ({ Component, hasWindow }) =>
-  hasWindow ? (
+const RenderProcess: React.FC<Process> = ({ Component, hasWindow }) => {
+  const shouldRenderInWindow = hasWindow ?? false;
+
+  return shouldRenderInWindow ? (
     <Window>
       <Component />
     </Window>
   ) : (
     <Component />
-  ); // [EN]: we used to invoke by <processDirectory.HelloWorld.Component />
+  );
+};
+// [EN]: we used to invoke by <processDirectory.HelloWorld.Component />
 
 export default RenderProcess;

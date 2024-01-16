@@ -18,7 +18,7 @@ const processDirectory: Processes = {
     hasWindow: true
   },
   Taskbar: {
-    Component: dynamic(() => import('components/system/Taskbar')),
+    Component: dynamic(() => import('components/system/Taskbar'))
   }
 };
 
