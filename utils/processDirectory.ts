@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic';
 import type { Processes } from 'types/contexts/process';
 
-const STARTUP_PROCESSES: string[] = ['Taskbar'];
+const STARTUP_PROCESSES: string[] = ['HelloWorld', 'Taskbar'];
 
 const processDirectory: Processes = {
   HelloWorld: {

@@ -3,18 +3,18 @@ import Home from "app/page";
 import StyledApp from "components/layout/StyledApp";
 import { render, screen } from "@testing-library/react";
 
-jest.mock('utils/VantaCloud', () => {
-  return jest.fn(() => () => ({
-    current: () => {
-      // Return a mock cleanup function
-      return () => {};
-    }
-  }));
-});
+// jest.mock('utils/VantaCloud', () => {
+//   return jest.fn(() => () => ({
+//     current: () => {
+//       // Return a mock cleanup function
+//       return () => {};
+//     }
+//   }));
+// });
 
-HTMLCanvasElement.prototype.getContext = jest.fn().mockReturnValue({
-  // Mock the necessary WebGL methods and properties
-});
+// HTMLCanvasElement.prototype.getContext = jest.fn().mockReturnValue({
+//   // Mock the necessary WebGL methods and properties
+// });
 
 describe("ue", () => {
   test("vlbn oi", () => {
