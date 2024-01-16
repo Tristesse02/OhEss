@@ -1,6 +1,6 @@
 // This is like the extension from the styled-components file (OOP)
-import type { WallpaperEffect } from 'types/styles/wallpaper';
 import 'styled-components';
+import type { WallpaperEffect } from 'types/styles/wallpaper';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
