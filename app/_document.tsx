@@ -1,4 +1,4 @@
-import withServerStyleSheet from "utils/withServerStyleSheet";
+import withServerStyleSheet from "utils/withStyledComponent";
 import type { DocumentContext, DocumentInitialProps } from "next/document";
 
 class MyDocument extends Document {
