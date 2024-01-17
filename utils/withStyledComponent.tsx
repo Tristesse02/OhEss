@@ -15,16 +15,11 @@ const withStyledComponents = async (
         enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
       });
 
-    const initialProps = await Document.getInitialProps(ctx);
+    const { styles, ...initialProps } = await Document.getInitialProps(ctx);
 
     return {
       ...initialProps,
-      styles: (
-        <>
-          {initialProps.styles}
-          {sheet.getStyleElement()}
-        </>
-      )
+      styles: [styles, sheet.getStyleElement()]
     };
   } finally {
     sheet.seal();
