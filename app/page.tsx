@@ -2,7 +2,7 @@
 import React from "react";
 import Desktop from "components/system/Desktop";
 import { ProcessProvider } from "contexts/process";
-import ProcessLoader from "components/system/ProcessLoader";
+import ProcessLoader from "components/system/Processes/ProcessLoader";
 
 const Home = (): React.JSX.Element => {
   return (
