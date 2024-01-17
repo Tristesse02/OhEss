@@ -8,10 +8,25 @@ const colors = {
   window: '#808080'
 };
 
+const size = {
+  clock: {
+    width: '90px'
+  },
+  startButton: {
+    width: '30px'
+  },
+  taskbar: {
+    entry: {
+      width: '80px'
+    },
+    height: '30px'
+  }
+};
+
 const wallpaper = vantaCloud(
   getBackgroundColors(backgroundChoices, 'mystical_twilight')
 );
 
-const defaultTheme = { colors, wallpaper };
+const defaultTheme = { colors, size, wallpaper };
 
 export default defaultTheme;
