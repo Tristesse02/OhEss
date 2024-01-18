@@ -4,7 +4,7 @@ import StartButton from "./StartButton";
 import TaskbarEntries from "./TaskbarEntries";
 import Clock from "./Clock";
 
-const Taskbar: React.FC = () => (
+const Taskbar = (): JSX.Element => (
   <StyledTaskbar>
     <StartButton />
     <TaskbarEntries />

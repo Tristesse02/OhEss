@@ -7,7 +7,7 @@ const ProcessReducer = ([id, process]: [string, Process]) => (
   <RenderProcess key={id} {...process} />
 );
 
-const ProcessLoader: React.FC = () => (
+const ProcessLoader = (): JSX.Element => (
   <ProcessConsumer>
     {({ processes }) => Object.entries(processes).map(ProcessReducer)}
   </ProcessConsumer>

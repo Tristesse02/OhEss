@@ -11,7 +11,7 @@ export const contextFactory: ContextFactory = <T,>(
   const { Consumer, Provider } = createContext<T>(initialContextState);
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => (
+  const ContextProvider = ({ children }: ContextProviderProps): JSX.Element => (
     // eslint-disable-next-line react/react-in-jsx-scope
     <Provider value={useContextState()}>{children}</Provider>
   );

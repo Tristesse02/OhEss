@@ -11,7 +11,7 @@ import StyledApp from "components/layout/StyledApp";
 
 //TODO: Move html tag somewhere else
 
-const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <SessionProvider>
       <StyledApp>

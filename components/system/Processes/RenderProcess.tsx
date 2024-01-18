@@ -11,7 +11,7 @@ const Window = dynamic(() => import("components/system/Window"));
  * @param param0 .
  * @returns .
  */
-const RenderProcess: React.FC<Process> = ({ Component, hasWindow }) => {
+const RenderProcess = ({ Component, hasWindow }: Process): JSX.Element => {
   const shouldRenderInWindow = hasWindow ?? false;
 
   return shouldRenderInWindow ? (

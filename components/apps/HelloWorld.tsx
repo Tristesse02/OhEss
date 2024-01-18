@@ -1,5 +1,5 @@
 import React from "react";
 
-const HelloWorld: React.FC = () => <h1>Hello World!</h1>;
+const HelloWorld = (): React.JSX.Element => <h1>Hello World!</h1>;
 
 export default HelloWorld;
