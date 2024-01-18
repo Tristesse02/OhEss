@@ -9,20 +9,16 @@ import StyledApp from "components/layout/StyledApp";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
-  children
-}: {
-  readonly children: React.ReactNode;
-}): React.JSX.Element {
-  return (
-    <html lang="en">
-      {/* <body className={inter.className}>{children}</body> */}
-      <Metadata />
-      <SessionProvider>
-        <StyledApp>
-          <body>{children}</body>
-        </StyledApp>
-      </SessionProvider>
-    </html>
-  );
-}
+const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <html lang="en">
+    {/* <body className={inter.className}>{children}</body> */}
+    <Metadata />
+    <SessionProvider>
+      <StyledApp>
+        <body>{children}</body>
+      </StyledApp>
+    </SessionProvider>
+  </html>
+);
+
+export default RootLayout;
