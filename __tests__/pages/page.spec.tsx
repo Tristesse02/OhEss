@@ -3,33 +3,20 @@ import Home from "app/page";
 import StyledApp from "components/layout/StyledApp";
 import { render, screen } from "@testing-library/react";
 
-// jest.mock('utils/VantaCloud', () => {
-//   return jest.fn(() => () => ({
-//     current: () => {
-//       // Return a mock cleanup function
-//       return () => {};
-//     }
-//   }));
-// });
-
-// HTMLCanvasElement.prototype.getContext = jest.fn().mockReturnValue({
-//   // Mock the necessary WebGL methods and properties
-// });
-
 describe("ue", () => {
   test("vlbn oi", () => {
     expect(5).toEqual(5);
   });
 });
 
-describe("dadf", () => {
-  test("renders index page", () => {
+describe("Test 1:", () => {
+  test("renders index page, checking for main role", () => {
     render(
       <StyledApp>
         <Home />
       </StyledApp>
     );
-    const elem = screen.getByText("Hello World!");
+    const elem = screen.getByRole("main");
 
     expect(elem).toBeInTheDocument();
   });

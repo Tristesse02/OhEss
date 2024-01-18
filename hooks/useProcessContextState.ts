@@ -3,7 +3,7 @@ import { HelloWorld, Taskbar } from './../utils/processDirectory';
 import type { ProcessContextState } from 'types/contexts/process';
 
 const useProcessContextState = (): ProcessContextState => {
-  const [processes] = useState({ HelloWorld, Taskbar });
+  const [processes] = useState({ Taskbar });
 
   const contextValue = useMemo(() => ({ processes }), [processes]);
 
