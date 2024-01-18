@@ -9,6 +9,8 @@ import StyledApp from "components/layout/StyledApp";
 
 // const inter = Inter({ subsets: ["latin"] });
 
+//TODO: Move html tag somewhere else
+
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <html lang="en">
     <SessionProvider>
