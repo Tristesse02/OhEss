@@ -14,7 +14,7 @@ const vantaCloud =
   (setting: VantaSettings): WallpaperEffect =>
   (element) => {
     const vantaEffect =
-      element && isWebGLAvailable
+      element !== null && isWebGLAvailable
         ? CLOUDS({
             el: element,
             THREE,

@@ -1,9 +1,9 @@
 import React from "react";
 import RenderProcess from "./RenderProcess";
 import { ProcessConsumer } from "contexts/process";
-import { Process } from "types/contexts/process";
+import type { Process } from "types/contexts/process";
 
-const ProcessReducer = ([id, process]: [string, Process]) => (
+const ProcessReducer = ([id, process]: [string, Process]): JSX.Element => (
   <RenderProcess key={id} {...process} />
 );
 

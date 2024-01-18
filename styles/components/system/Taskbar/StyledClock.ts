@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { centered } from '../../../GlobalTaskbarStyle';
 
-
 const StyledClock = styled.time`
   ${centered}
   background-color: green;

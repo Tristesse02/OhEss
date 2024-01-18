@@ -1,4 +1,4 @@
-import { VantaSettings } from 'types/styles/wallpaper';
+import type { VantaSettings } from 'types/styles/wallpaper';
 
 export function getBackgroundColors(
   backgroundChoices: any,
