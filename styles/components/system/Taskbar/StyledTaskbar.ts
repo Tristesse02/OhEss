@@ -5,7 +5,7 @@ const StyledTaskbar = styled.nav`
   bottom: 0;
   height: ${({ theme }) => theme.size.taskbar.height};
   left: 0;
-  position: fixed !important;
+  position: absolute !important;
   right: 0;
   width: 100vw;
 `;
