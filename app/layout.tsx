@@ -11,10 +11,9 @@ import StyledApp from "components/layout/StyledApp";
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <html lang="en">
-    {/* <body className={inter.className}>{children}</body> */}
-    <Metadata />
     <SessionProvider>
       <StyledApp>
+        <Metadata />
         <body>{children}</body>
       </StyledApp>
     </SessionProvider>
