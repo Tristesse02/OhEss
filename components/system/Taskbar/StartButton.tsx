@@ -7,7 +7,7 @@ const StartButton = (): JSX.Element => {
   };
 
   return (
-    <StyledStartButton type="button" onClick={handleButtonClick}>
+    <StyledStartButton type="button" title="Start" onClick={handleButtonClick}>
       X
     </StyledStartButton>
   );
