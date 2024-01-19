@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { centered } from '../../../GlobalTaskbarStyle';
 
-const StyledStartButton = styled.button`
+const StyledStartButton = styled.button.attrs(() => ({
+  type: 'button'
+}))`
   ${centered}
   background-color: red;
   height: 100%;
