@@ -1,5 +1,6 @@
 {
   "extends": [
+    "esbenp.prettier-vscode",
     "stylelint-config-prettier",
     "stylelint-config-standard",
     "stylelint-config-styled-components"

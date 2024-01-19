@@ -1,7 +1,8 @@
 {
-	"recommendations": [
-		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode",
-		"styled-components.vscode-styled-components",
-	],
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "styled-components.vscode-styled-components",
+    "styledlint.vscode-styledlint"
+  ]
 }
