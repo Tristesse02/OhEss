@@ -10,13 +10,13 @@
     "build": "next build",
     "prepare": "husky install",
     "test:watch": "jest --watch",
-    "stylelint": "stylelint **/*.tsx",
+    "stylelint": "stylelint **/*.ts",
     "test": "jest --config=jest.config.js",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "lint-staged": {
     "*.js": "eslint --fix",
-    "*.tsx": "stylelint --fix"
+    "*.ts": "stylelint --fix"
   },
   "repository": {
     "type": "git",
