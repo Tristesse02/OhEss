@@ -3,7 +3,7 @@ import RenderProcess from "./RenderProcess";
 import { ProcessConsumer } from "contexts/process";
 import type { Processes } from "types/contexts/process";
 
-const renderProcesses = (processes: Processes) =>
+const renderProcesses = (processes: Processes): React.JSX.Element[] =>
   Object.entries(processes).map(([id, process]) => (
     <RenderProcess key={id} {...process} />
   ));
