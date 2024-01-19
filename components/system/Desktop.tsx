@@ -8,11 +8,7 @@ const Desktop = ({ children }: DesktopProps): JSX.Element => {
 
   useWallpaper(desktopRef);
 
-  return (
-    <StyledDesktop ref={desktopRef} as="main">
-      {children}
-    </StyledDesktop>
-  );
+  return <StyledDesktop ref={desktopRef}>{children}</StyledDesktop>;
 };
 
 export default Desktop;
