@@ -3,6 +3,7 @@ import React from "react";
 import Metadata from "components/layout/Metadata";
 import { SessionProvider } from "contexts/session";
 import StyledApp from "components/layout/StyledApp";
+import { FileSystemProvider } from "contexts/fileSystem";
 
 // [EN]: if we want to use next/font/google, we have to delete .babelrc (part of the configuration)
 // import { Inter } from "next/font/google";
@@ -17,12 +18,14 @@ const RootLayout = ({
   children: React.ReactNode;
 }): JSX.Element => (
   <html lang="en">
-    <SessionProvider>
-      <StyledApp>
-        <Metadata />
-        <body>{children}</body>
-      </StyledApp>
-    </SessionProvider>
+    <FileSystemProvider>
+      <SessionProvider>
+        <StyledApp>
+          <Metadata />
+          <body>{children}</body>
+        </StyledApp>
+      </SessionProvider>
+    </FileSystemProvider>
   </html>
 );
 
