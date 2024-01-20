@@ -6,21 +6,18 @@ import { backgroundChoices } from 'Collection/backgroundChoice';
 const colors = {
   backgroundColor: '#db60d3',
   primary: '#000',
+  startButton: '#FFFFFF',
   taskbar: 'rgba(0, 0, 0, 0.69)',
   window: '#808080'
 };
 
-const fonts = {
+const sizes = {
   clock: {
-    size: '12px'
-  }
-};
-
-const size = {
-  clock: {
+    fontSize: '12px',
     width: '76px'
   },
   startButton: {
+    iconSize: '16.5px',
     width: '36px'
   },
   taskbar: {
@@ -36,6 +33,6 @@ const wallpaper = vantaCloud(
   getBackgroundColors(backgroundChoices, 'mystical_twilight')
 );
 
-const defaultTheme: DefaultTheme = { colors, fonts, size, wallpaper };
+const defaultTheme: DefaultTheme = { colors, sizes, wallpaper };
 
 export default defaultTheme;

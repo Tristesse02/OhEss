@@ -3,11 +3,11 @@ import { centered } from '../../../GlobalTaskbarStyle';
 
 const StyledClock = styled.time`
   ${centered}
-  font-size: ${({ theme }) => theme.fonts.clock.size};
+  font-size: ${({ theme }) => theme.sizes.clock.fontSize};
   height: 100%;
   position: absolute;
   right: 0;
-  width: ${({ theme }) => theme.size.clock.width};
+  width: ${({ theme }) => theme.sizes.clock.width};
 `;
 
 export default StyledClock;

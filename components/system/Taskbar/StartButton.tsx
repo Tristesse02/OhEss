@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import StyledStartButton from "styles/components/system/Taskbar/StyledStartButton";
 
 const StartButton = (): JSX.Element => {
@@ -8,7 +10,7 @@ const StartButton = (): JSX.Element => {
 
   return (
     <StyledStartButton title="Start" onClick={handleButtonClick}>
-      X
+      <FontAwesomeIcon icon={faMoon} />
     </StyledStartButton>
   );
 };
