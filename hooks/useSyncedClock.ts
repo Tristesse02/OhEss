@@ -11,7 +11,9 @@ const useSyncedClock = (callback: () => void): void => {
       timeoutId = setInterval(callback, MILLIS_PER_SECOND);
     }, MILLIS_PER_SECOND - new Date().getMilliseconds());
 
-    return () => clearInterval(timeoutId);
+    return () => {
+      clearInterval(timeoutId);
+    };
   }, [callback]);
 };
 

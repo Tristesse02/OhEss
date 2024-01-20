@@ -1,5 +1,5 @@
 import vantaCloud from 'utils/VantaCloud';
-import { DefaultTheme } from 'styled-components';
+import type { DefaultTheme } from 'styled-components';
 import { getBackgroundColors } from 'utils/getBGCol';
 import { backgroundChoices } from 'Collection/backgroundChoice';
 

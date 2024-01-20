@@ -1,5 +1,5 @@
 import defaultTheme from './defaultTheme';
-import { DefaultTheme } from 'styled-components';
+import type { DefaultTheme } from 'styled-components';
 
 type Themes = Record<string, DefaultTheme>;
 

@@ -1,12 +1,11 @@
 import nextConfig from 'next.config';
-import { useRouter } from 'next/router';
 import { useTheme } from 'styled-components';
 
-type LocaleTimeDate = {
+interface LocaleTimeDate {
   date: string;
   time: string;
   dateTime: string;
-};
+}
 
 const useLocaleTimeDate = (now: Date): LocaleTimeDate => {
   const locale = nextConfig?.i18n?.defaultLocale ?? 'en-US';

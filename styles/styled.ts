@@ -15,7 +15,7 @@ declare module 'styled-components' {
     formats: {
       date: Intl.DateTimeFormatOptions;
       time: Intl.DateTimeFormatOptions;
-    }
+    };
     sizes: {
       clock: {
         fontSize: string;

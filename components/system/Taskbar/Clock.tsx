@@ -6,7 +6,9 @@ import StyledClock from "styles/components/system/Taskbar/StyledClock";
 const Clock = (): JSX.Element => {
   const [now, setNow] = React.useState(new Date());
   const { date, time, dateTime } = useLocaleTimeDate(now);
-  const updateClock = useCallback(() => setNow(new Date()), [setNow]);
+  const updateClock = useCallback(() => {
+    setNow(new Date());
+  }, [setNow]);
 
   useSyncedClock(updateClock);
 
