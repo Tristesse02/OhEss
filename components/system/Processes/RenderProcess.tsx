@@ -3,7 +3,9 @@ import dynamic from "next/dynamic";
 import type { Process } from "types/contexts/process";
 
 // eslint-disable-next-line @typescript-eslint/promise-function-async
-const Window = dynamic(() => import("components/system/Window"));
+const Window = dynamic(() => import("components/system/Window"), {
+  ssr: false
+});
 
 /**
  * A function that renders system components (etc Taskbar)
