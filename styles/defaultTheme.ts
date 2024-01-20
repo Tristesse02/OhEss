@@ -1,4 +1,5 @@
 import vantaCloud from 'utils/VantaCloud';
+import { DefaultTheme } from 'styled-components';
 import { getBackgroundColors } from 'utils/getBGCol';
 import { backgroundChoices } from 'Collection/backgroundChoice';
 
@@ -33,6 +34,6 @@ const wallpaper = vantaCloud(
   getBackgroundColors(backgroundChoices, 'mystical_twilight')
 );
 
-const defaultTheme = { colors, fonts, size, wallpaper };
+const defaultTheme: DefaultTheme = { colors, fonts, size, wallpaper };
 
 export default defaultTheme;
