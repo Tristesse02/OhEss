@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     outline: 0;
   }
 
+  button {
+    background-color: unset;
+  }
+  
   ol,
   ul {
     list-style: none;

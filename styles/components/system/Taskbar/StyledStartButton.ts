@@ -5,7 +5,6 @@ const StyledStartButton = styled.button.attrs(() => ({
   type: 'button'
 }))`
   ${centered}
-  background-color: red;
   height: 100%;
   left: 0;
   position: absolute;

@@ -7,6 +7,7 @@ declare module 'styled-components' {
     colors: {
       backgroundColor: string;
       primary: string;
+      taskbar: string;
       window: string;
     };
     fonts: {

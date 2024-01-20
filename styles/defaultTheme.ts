@@ -6,6 +6,7 @@ import { backgroundChoices } from 'Collection/backgroundChoice';
 const colors = {
   backgroundColor: '#db60d3',
   primary: '#000',
+  taskbar: 'rgba(0, 0, 0, 0.69)',
   window: '#808080'
 };
 
