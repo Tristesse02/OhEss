@@ -1,6 +1,4 @@
-export interface BackgroundChoice {
-  [key: string]: number[];
-}
+export type BackgroundChoice = Record<string, number[]>;
 
 export const backgroundChoices = {
   nature_inspired: [0xffebeb, 0xbab86c, 0x8a3324, 0x228b22],
