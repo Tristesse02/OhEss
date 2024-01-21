@@ -20,13 +20,15 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest",
-    "project": "./tsconfig.json"
+    "project": "d:/ohess/tsconfig.json"
   },
   "plugins": [
     "jest",
     "react",
+    "import",
     "prettier",
     "jest-dom",
+    "react-hooks",
     "testing-library",
     "simple-import-sort",
     "@typescript-eslint"
