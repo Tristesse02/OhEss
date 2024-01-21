@@ -7,7 +7,7 @@ interface LocaleTimeDate {
   dateTime: string;
 }
 
-const useLocaleTimeDate = (now: Date): LocaleTimeDate => {
+const useLocaleDateTime = (now: Date): LocaleTimeDate => {
   const locale = nextConfig?.i18n?.defaultLocale ?? 'en-US';
   const { formats } = useTheme();
 
@@ -18,4 +18,4 @@ const useLocaleTimeDate = (now: Date): LocaleTimeDate => {
   };
 };
 
-export default useLocaleTimeDate;
+export default useLocaleDateTime;
