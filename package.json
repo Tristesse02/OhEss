@@ -37,7 +37,7 @@
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
-    "browserfs": "github:jvilk/BrowserFS",
+    "browserfs": "^1.4.3",
     "canvas": "^2.11.2",
     "eslint-config-next": "^13.4.18",
     "next": "^13.4.18",

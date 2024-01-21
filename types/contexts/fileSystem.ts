@@ -1,5 +1,6 @@
-import { typeFSModule } from 'browserfs/dist/node/core/FS';
+import { FSModule } from 'browserfs/dist/node/core/FS';
+
 
 export type FileSystemContextState = {
-  fs: typeFSModule | null;
+  fs: FSModule | null;
 };

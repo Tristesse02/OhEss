@@ -1,7 +1,7 @@
 import * as BrowserFS from 'browserfs';
 import { useEffect, useState } from 'react';
 import type { FSModule } from 'browserfs/dist/node/core/FS';
-import FileSystemContextState from 'types/contexts/fileSystem';
+import type { FileSystemContextState } from 'types/contexts/fileSystem';
 
 const useFileSystemContextState = (): FileSystemContextState => {
   const [fs, setFs] = useState<FSModule | null>(null);
@@ -11,7 +11,8 @@ const useFileSystemContextState = (): FileSystemContextState => {
 
     BrowserFS.configure(
       {
-        fs: 'IndexedDB'
+        fs: 'IndexedDB',
+        options: {} // Add the options property with an empty object
       },
       () => {
         setFs(BrowserFS.BFSRequire('fs'));
