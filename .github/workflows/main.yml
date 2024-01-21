@@ -10,8 +10,6 @@ jobs:
       - name: Install Modules
         run: npm install
       - name: Run Build
-        env:
-          ESLINT_PROJECT_PATH: './tsconfig.json'
         run: npm run build
       - name: Run Tests
         run: npm test
