@@ -7,6 +7,11 @@ const Window = dynamic(() => import("components/system/Window"), {
   ssr: false
 });
 
+const withWindow = (Component: React.ComponentType): JSX.Element => (
+  <Window>
+    <Component />
+  </Window>
+);
 /**
  * A function that renders system components (etc Taskbar)
  * others render by wrapping in a window.
@@ -16,13 +21,7 @@ const Window = dynamic(() => import("components/system/Window"), {
 const RenderProcess = ({ Component, hasWindow }: Process): JSX.Element => {
   const shouldRenderInWindow = hasWindow ?? false;
 
-  return shouldRenderInWindow ? (
-    <Window>
-      <Component />
-    </Window>
-  ) : (
-    <Component />
-  );
+  return shouldRenderInWindow ? withWindow(Component) : <Component />;
 };
 // [EN]: we used to invoke by <processDirectory.HelloWorld.Component />
 
