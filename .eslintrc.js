@@ -20,7 +20,7 @@ module.export = {
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 'latest',
-    project:'./tsconfig.json' //  This absolute path is different from github repo
+    project: process.env.ESLINT_PROJECT_PATH || './tsconfig.json' //  This absolute path is different from github repo
   },
   plugins: [
     'jest',
