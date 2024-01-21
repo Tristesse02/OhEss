@@ -1,3 +1,7 @@
+/* 
+IMPORTANT: Whenever making changes to this file, please delete visibility
+of this file in .gitignore first! Then will be able to commit and make changes
+*/
 {
   "parser": "@typescript-eslint/parser",
   "env": {
@@ -20,7 +24,7 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest",
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json" //  This absolute path is different from github repo 
   },
   "plugins": [
     "jest",
