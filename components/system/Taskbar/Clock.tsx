@@ -8,7 +8,7 @@ const Clock = (): JSX.Element => {
   const { date, time, dateTime } = useLocaleDateTime(now);
   const updateClock = useCallback(() => {
     setNow(new Date());
-  }, [setNow]);
+  }, []);
 
   useSyncedClock(updateClock);
 

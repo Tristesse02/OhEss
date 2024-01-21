@@ -18,7 +18,7 @@ const useFileSystemContextState = (): FileSystemContextState => {
         setFs(BrowserFS.BFSRequire('fs'));
       }
     );
-  }, [setFs]);
+  }, []);
 
   return { fs };
 };
