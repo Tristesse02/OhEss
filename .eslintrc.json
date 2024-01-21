@@ -25,7 +25,6 @@
   "plugins": [
     "jest",
     "react",
-    "import",
     "prettier",
     "jest-dom",
     "react-hooks",
