@@ -20,7 +20,7 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest",
-    "project": "./tsconfig.json"
+    "project": "d:/ohEss/OhEss/tsconfig.json" //  This absolute path is different from github repo
   },
   "plugins": [
     "jest",
