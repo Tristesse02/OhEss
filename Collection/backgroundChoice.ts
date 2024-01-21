@@ -1,3 +1,7 @@
+export type BackgroundChoice = {
+  [key: string]: number[];
+};
+
 export const backgroundChoices = {
   nature_inspired: [0xffebeb, 0xbab86c, 0x8a3324, 0x228b22],
   pastel: [0xfffdd0, 0xff7f50, 0x40e0d0, 0x191970],

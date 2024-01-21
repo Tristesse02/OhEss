@@ -1,7 +1,11 @@
 import React from "react";
 import StyledWindow from "styles/components/system/StyledWindow";
 
-const Window = ({ children }: any): React.JSX.Element => (
+type StyledWindowProps = {
+  children: React.ReactNode;
+};
+
+const Window = ({ children }: StyledWindowProps): React.JSX.Element => (
   <StyledWindow>{children}</StyledWindow>
 );
 

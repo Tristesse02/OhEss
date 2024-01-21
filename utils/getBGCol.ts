@@ -1,7 +1,8 @@
+import { BackgroundChoice } from 'Collection/backgroundChoice';
 import type { VantaSettings } from 'types/styles/wallpaper';
 
 export function getBackgroundColors(
-  backgroundChoices: any,
+  backgroundChoices: BackgroundChoice,
   backgroundName: string
 ): VantaSettings {
   const val = backgroundChoices[backgroundName];
