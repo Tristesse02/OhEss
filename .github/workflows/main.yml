@@ -11,7 +11,7 @@ jobs:
         run: npm install
       - name: Run Build
         env:
-          ESLINT_PROJECT_PATH: "/home/runner/work/your-repo/your-repo/tsconfig.json"
+          ESLINT_PROJECT_PATH: "/home/runner/work/OhEss/OhEss/tsconfig.json"
         run: npm run build
       - name: Run Tests
         run: npm test

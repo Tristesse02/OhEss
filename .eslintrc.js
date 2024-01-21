@@ -1,4 +1,9 @@
-module.export = {
+module.exports = {
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 'latest',
+    project: process.env.ESLINT_PROJECT_PATH || 'd:/ohEss/OhEss/tsconfig.json' //  This absolute path is different from github repo
+  },
   parser: '@typescript-eslint/parser',
   env: {
     browser: true,
@@ -17,11 +22,6 @@ module.export = {
     'plugin:testing-library/react',
     'plugin:react-hooks/recommended'
   ],
-  parserOptions: {
-    sourceType: 'module',
-    ecmaVersion: 'latest',
-    project: process.env.ESLINT_PROJECT_PATH || './tsconfig.json' //  This absolute path is different from github repo
-  },
   plugins: [
     'jest',
     'react',
