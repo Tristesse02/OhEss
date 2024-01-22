@@ -6,13 +6,13 @@ const FileSystemConfig: FileSystemConfiguration = {
   options: {
     readable: {
       fs: 'XmlHttpRequest',
-      option: {
+      options: {
         index: publicFileSystemIndex
       }
     },
     writable: {
       fs: 'IndexedDB',
-      option: {
+      options: {
         storeName: 'browser-fs-cache'
       }
     }
