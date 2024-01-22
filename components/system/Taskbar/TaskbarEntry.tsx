@@ -6,6 +6,9 @@ interface TaskbarEntryProps {
   title: string;
 }
 
+/**
+ * A JSX component that renders a taskbar entry.
+ */
 const TaskbarEntry = ({
   icon = "/Lau.ico",
   title = "Hello World"
