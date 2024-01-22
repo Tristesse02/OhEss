@@ -5,7 +5,7 @@ import type { SessionContextState } from 'types/contexts/session';
 export const initialProcessContextState: ProcessContextState = {
   close: () => undefined,
   open: () => undefined,
-  processes: {}
+  mapProcesses: () => []
 };
 export const initialFileSystemContextState: FileSystemContextState = {
   fs: null
