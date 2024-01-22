@@ -43,8 +43,8 @@ const sizes = {
       borderSize: '2px',
       fontSize: '12px',
       icon: {
-        margin: `0 5px`,
-        size: `16px`
+        margin: '0 5px',
+        size: '16px'
       },
       maxWidth: '161px'
     },
