@@ -1,14 +1,10 @@
 /* eslint-disable @typescript-eslint/promise-function-async */
 import dynamic from 'next/dynamic';
-import type { Processes } from 'types/contexts/process';
+import type { Process } from 'types/contexts/process';
 
-const ProcessDirectory: Processes = {
-  HelloWorld: {
-    Component: dynamic(() => import('components/apps/HelloWorld'), {
-      ssr: false
-    }),
-    hasWindow: true
-  }
+export const HelloWorld: Process = {
+  Component: dynamic(() => import('components/apps/HelloWorld')),
+  hasWindow: true,
+  icon: '/Lau.ico',
+  title: 'Hello World'
 };
-
-export default ProcessDirectory;
