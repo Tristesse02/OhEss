@@ -8,7 +8,7 @@ const useFileSystemContextState = (): FileSystemContextState => {
   const [fs, setFs] = useState<FSModule | null>(null);
 
   useEffect(() => {
-    if (fs !== null) {
+    if (fs === null) {
       configure(FileSystemConfig, () => {
         setFs(BFSRequire('fs'));
       });
