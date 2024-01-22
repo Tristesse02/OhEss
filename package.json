@@ -12,7 +12,8 @@
     "test:watch": "jest --watch",
     "stylelint": "stylelint **/*.ts",
     "test": "jest --config=jest.config.js",
-    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "build:fs": "cd public && node ../node_modules/browserfs/dist/scripts/make_http_index.js > ../public.json"
   },
   "lint-staged": {
     "*.js": "eslint --fix",
