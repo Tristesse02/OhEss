@@ -10,6 +10,9 @@ export interface Process {
 export type Processes = Record<string, Process>;
 
 export interface ProcessContextState {
+  open: (id: string) => void;
+  close: (id: string) => void;
+  // contextValue: { processes: Processes };
   processes: Processes;
 }
 
