@@ -9,14 +9,12 @@ import { FileSystemProvider } from "contexts/fileSystem";
 const Home = (): React.JSX.Element => {
   return (
     <React.StrictMode>
-      <FileSystemProvider>
-        <Desktop>
-          <ProcessProvider>
-            <Taskbar />
-            <ProcessLoader />
-          </ProcessProvider>
-        </Desktop>
-      </FileSystemProvider>
+      <Desktop>
+        <ProcessProvider>
+          <Taskbar />
+          <ProcessLoader />
+        </ProcessProvider>
+      </Desktop>
     </React.StrictMode>
   );
 };
