@@ -11,7 +11,7 @@ const colors = {
   startButton: '#FFFFFF',
   taskbar: 'rgba(0, 0, 0, 0.69)',
   window: '#808080',
-  taskbarHover: 'hsla(0, 0%, 25%, 70%)'
+  taskbarHover: 'hsla(0, 0%, 30%, 90%)'
 };
 
 const formats = {
