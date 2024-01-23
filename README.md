@@ -2,9 +2,17 @@
 
 ## August, 2023
 
-## Introduction:
+# Introduction:
 - Hello, it's Minh Vu
 - The aim of the project is to create a fully functional Operating System that has the interface mimicking Window 11 using mainly Typescript language, React, and NextJS framework.
+- This project is largely inspired by [JSLinux](https://bellard.org/jslinux/) created by Fabrice Bellard and [daedalOS](https://dustinbrett.com/) created by Dustin Brett.
+
+# Progress:
+- We are fastfowarding to creating the file system, resizing windows, and creating real application inside the web-interface
+
+# Credibility:
+- My project is largely follow the guides and documentation through Dustin Brett's youtube videos. You can check out his Youtube video [here](https://www.youtube.com/@DustinBrett)
+
 
 <!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
