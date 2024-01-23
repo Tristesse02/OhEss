@@ -10,12 +10,10 @@ interface LocaleTimeDate {
 const useLocaleDateTime = (now: Date): LocaleTimeDate => {
   const locale = nextConfig?.i18n?.defaultLocale ?? 'en-US';
   const { formats } = useTheme();
-
-  return {
-    date: new Intl.DateTimeFormat(locale, formats.date).format(now),
-    time: new Intl.DateTimeFormat(locale, formats.time).format(now),
-    dateTime: now.toISOString()
-  };
+  const date = new Intl.DateTimeFormat(locale, formats.date).format(now);
+  const time = new Intl.DateTimeFormat(locale, formats.time).format(now);
+  const dateTime = now.toISOString();
+  return { date, time, dateTime };
 };
 
 export default useLocaleDateTime;
