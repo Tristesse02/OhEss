@@ -15,6 +15,12 @@ const processDirectory: Processes = {
     hasWindow: true,
     icon: '/Lau.ico',
     title: 'Hello World'
+  },
+  GeomyDash: {
+    Component: dynamic(() => import('components/apps/GeomyDash')),
+    hasWindow: true,
+    icon: '/geomydash.ico',
+    title: 'Geomy Dash'
   }
 };
 
