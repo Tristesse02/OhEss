@@ -8,4 +8,5 @@ export type ContextFactory = <T>(
 ) => {
   Consumer: React.Consumer<T>;
   Provider: React.FC<ContextProviderProps>;
+  useContext: () => T;
 };

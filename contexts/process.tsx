@@ -3,9 +3,13 @@ import type { ProcessContextState } from "types/contexts/process";
 import useProcessContextState from "hooks/useProcessContextState";
 import { initialProcessContextState } from "utils/initialContextStates";
 
-const { Consumer, Provider } = contextFactory<ProcessContextState>(
+const { Consumer, Provider, useContext } = contextFactory<ProcessContextState>(
   initialProcessContextState,
   useProcessContextState
 );
 
-export { Consumer as ProcessConsumer, Provider as ProcessProvider };
+export {
+  Consumer as ProcessConsumer,
+  Provider as ProcessProvider,
+  useContext as useProcesses
+};
