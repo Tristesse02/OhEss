@@ -12,6 +12,7 @@ declare module 'styled-components' {
       startButton: string;
       taskbar: string;
       window: string;
+      taskbarHover: string;
     };
     formats: {
       date: Intl.DateTimeFormatOptions;

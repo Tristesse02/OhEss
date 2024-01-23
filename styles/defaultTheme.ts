@@ -10,7 +10,8 @@ const colors = {
   primary: '#000',
   startButton: '#FFFFFF',
   taskbar: 'rgba(0, 0, 0, 0.69)',
-  window: '#808080'
+  window: '#808080',
+  taskbarHover: `hsla(0, 0%, 25%, 70%)`
 };
 
 const formats = {
