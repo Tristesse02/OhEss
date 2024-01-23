@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 import type {
   ContextFactory,
   ContextProviderProps
@@ -19,6 +19,6 @@ export const contextFactory: ContextFactory = <T,>(
   return {
     Consumer: Context.Consumer,
     Provider: ContextProvider,
-    useContext: () => useContextState(Context)
+    useContext: () => useContext(Context)
   };
 };
