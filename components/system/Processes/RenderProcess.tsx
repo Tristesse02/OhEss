@@ -9,6 +9,12 @@ interface RenderProcessProps {
   Component: React.ComponentType;
   hasWindow?: boolean;
 }
+
+/**
+ * A JSX.Element that wraps a component in a window.
+ * @param Component
+ * @returns
+ */
 const withWindow = (Component: React.ComponentType): JSX.Element => (
   <Window>
     <Component />
