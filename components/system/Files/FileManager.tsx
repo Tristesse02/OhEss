@@ -16,7 +16,7 @@ const FileManager = ({ directory }: FileManagerProps): JSX.Element => {
           key={file}
           name={basename(file, extname(file))}
           path={resolve(directory, file)}
-        ></FileEntry>
+        />
       ))}
     </StyledFileManager>
   );
