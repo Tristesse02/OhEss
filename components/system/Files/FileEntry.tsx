@@ -8,6 +8,11 @@ interface FileEntryProps {
   path: string;
 }
 
+/**
+ * The function that renders the file entry.
+ * @param param0
+ * @returns
+ */
 const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
   const { icon, pid } = useFileInfo(path);
   const { open, close } = useProcesses();
@@ -20,7 +25,6 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
     close(pid);
   }, [pid, close]);
 
-  console.log("minhdz", name, pid);
   return (
     <StyledFileEntry>
       <button type="button" onDoubleClick={onActivate} onClick={onDeactivate}>

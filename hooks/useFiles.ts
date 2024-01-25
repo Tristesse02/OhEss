@@ -1,6 +1,12 @@
 import { useFileSystem } from 'contexts/fileSystem';
 import { useEffect, useState } from 'react';
 
+/**
+ * The function that reads the files in a directory and returns an array of JSX elements.
+ * @param directory
+ * @param callback
+ * @returns
+ */
 const useFiles = (
   directory: string,
   callback: (file: string) => JSX.Element

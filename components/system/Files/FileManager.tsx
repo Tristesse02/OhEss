@@ -8,6 +8,11 @@ interface FileManagerProps {
   directory: string;
 }
 
+/**
+ * The function that renders the file manager.
+ * @param param0
+ * @returns
+ */
 const FileManager = ({ directory }: FileManagerProps): JSX.Element => {
   return (
     <StyledFileManager>
