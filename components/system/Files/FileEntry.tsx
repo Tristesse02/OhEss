@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import useFileInfo from "hooks/useFileInfo";
 import { useProcesses } from "contexts/process";
 import StyledFileEntry from "styles/components/system/Files/StyledFileEntry";
+import Button from "styles/common/Button";
 
 interface FileEntryProps {
   name: string;
@@ -27,13 +28,13 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
 
   return (
     <StyledFileEntry>
-      <button type="button" onDoubleClick={onActivate} onClick={onDeactivate}>
+      <Button onDoubleClick={onActivate} onClick={onDeactivate}>
         <figure>
           <img src={icon} alt={name} />
           <figcaption>{pid}</figcaption>{" "}
           {/* should have been {name} instead of pid */}
         </figure>
-      </button>
+      </Button>
     </StyledFileEntry>
   );
 };
