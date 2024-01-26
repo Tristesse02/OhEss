@@ -11,16 +11,6 @@ interface RenderProcessProps {
 }
 
 /**
- * A JSX.Element that wraps a component in a window.
- * @param Component
- * @returns
- */
-const withWindow = (Component: React.ComponentType): JSX.Element => (
-  <Window>
-    <Component />
-  </Window>
-);
-/**
  * A function that renders system components (etc Taskbar)
  * others render by wrapping in a window.
  * @param param0 .
@@ -32,7 +22,13 @@ const RenderProcess = ({
 }: RenderProcessProps): JSX.Element => {
   const shouldRenderInWindow = hasWindow ?? false;
 
-  return shouldRenderInWindow ? withWindow(Component) : <Component />;
+  return shouldRenderInWindow ? (
+    <Window>
+      <Component />
+    </Window>
+  ) : (
+    <Component />
+  );
 };
 // [EN]: we used to invoke by <processDirectory.HelloWorld.Component />
 
