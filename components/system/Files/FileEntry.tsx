@@ -1,9 +1,9 @@
-import React, { useCallback } from "react";
 import Button from "styles/common/Button";
+import React, { useCallback } from "react";
 import useFileInfo from "hooks/useFileInfo";
 import { useProcesses } from "contexts/process";
+import useDoubleClick from "hooks/useDoubleClick";
 import StyledFileEntry from "styles/components/system/Files/StyledFileEntry";
-import useDoubleClick from "@/hooks/useDoubleClick";
 
 interface FileEntryProps {
   name: string;
