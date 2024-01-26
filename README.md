@@ -4,7 +4,7 @@
 
 # Introduction:
 - Hello, it's Minh Vu
-- The aim of the project is to create a fully functional Operating System that has the interface mimicking Window 11 using mainly Typescript language, React, and NextJS framework.
+- The aim of the project is to create a fully functional Operating System that has the interface mimicking Window 10 using mainly Typescript language, React, and NextJS framework.
 - This project is largely inspired by [JSLinux](https://bellard.org/jslinux/) created by Fabrice Bellard and [daedalOS](https://dustinbrett.com/) created by Dustin Brett.
 
 # Progress:
