@@ -1,5 +1,5 @@
-import type { BackgroundChoice } from 'Collection/backgroundChoice';
 import type { VantaSettings } from './VantaCloud';
+import type { BackgroundChoice } from 'Collection/backgroundChoice';
 
 export function getBackgroundColors(
   backgroundChoices: BackgroundChoice,
