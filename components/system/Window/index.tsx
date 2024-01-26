@@ -1,7 +1,8 @@
 import React from "react";
+import Titlebar from "./Titlebar";
 import { useProcesses } from "contexts/process";
-import StyledWindow from "styles/components/system/StyledWindow";
-import type { ProcessComponentProps } from "./Processes/RenderProcess";
+import StyledWindow from "styles/components/system/Window/StyledWindow";
+import type { ProcessComponentProps } from "../Processes/RenderProcess";
 
 const Window: React.FC<
   ProcessComponentProps & { children: React.ReactNode }
@@ -11,7 +12,12 @@ const Window: React.FC<
       [id]: { minimized }
     }
   } = useProcesses();
-  return <StyledWindow minimized={minimized}>{children}</StyledWindow>;
+  return (
+    <StyledWindow $minimized={minimized}>
+      <Titlebar id={id} />
+      {children}
+    </StyledWindow>
+  );
 };
 
 export default Window;
