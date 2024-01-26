@@ -28,7 +28,7 @@ const withWindow = (Component: React.ComponentType): JSX.Element => (
  */
 const RenderProcess = ({
   Component,
-  hasWindow
+  hasWindow = false
 }: RenderProcessProps): JSX.Element => {
   const shouldRenderInWindow = hasWindow ?? false;
 
