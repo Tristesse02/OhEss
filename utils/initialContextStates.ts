@@ -5,7 +5,9 @@ import type { FileSystemContextState } from 'hooks/useFileSystemContextState';
 export const initialProcessContextState: ProcessContextState = {
   close: () => undefined,
   open: () => undefined,
-  mapProcesses: () => []
+  mapProcesses: () => [],
+  maximized: () => undefined,
+  minimized: () => undefined
 };
 export const initialFileSystemContextState: FileSystemContextState = {
   fs: null

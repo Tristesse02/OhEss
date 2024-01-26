@@ -3,8 +3,10 @@ import dynamic from 'next/dynamic';
 import type { ComponentType } from 'react';
 
 export interface Process {
-  Component: ComponentType; // [EN]: used to be "ComponentType"
+  Component: ComponentType;
   hasWindow?: boolean;
+  maximized?: boolean;
+  minimized?: boolean;
   title: string;
   icon: string;
 }

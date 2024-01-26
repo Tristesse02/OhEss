@@ -1,6 +1,11 @@
 import { useCallback, useState } from 'react';
 import type { Process, Processes } from 'utils/processDirectory';
-import { closeProcess, openProcess } from 'utils/processFunctions';
+import {
+  closeProcess,
+  maximizeProcess,
+  minimizeProcess,
+  openProcess
+} from 'utils/processFunctions';
 
 // Type/Interface definitions
 type ProcessMap = (
@@ -11,6 +16,8 @@ export interface ProcessContextState {
   open: (id: string) => void;
   close: (id: string) => void;
   mapProcesses: ProcessMap;
+  maximized: (id: string) => void;
+  minimized: (id: string) => void;
 }
 
 // Function implementation
@@ -30,7 +37,15 @@ const useProcessContextState = (): ProcessContextState => {
     setProcesses(openProcess(id));
   }, []);
 
-  return { open, close, mapProcesses }; // This is what Process provides to its childrens
+  const maximized = useCallback((id: string) => {
+    setProcesses(maximizeProcess(id));
+  }, []);
+
+  const minimized = useCallback((id: string) => {
+    setProcesses(minimizeProcess(id));
+  }, []);
+
+  return { open, close, mapProcesses, maximized, minimized }; // This is what Process provides to its childrens
 };
 
 export default useProcessContextState;
