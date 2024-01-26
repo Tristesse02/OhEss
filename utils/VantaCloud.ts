@@ -5,7 +5,7 @@ import CLOUDS from 'vanta/dist/vanta.fog.min.js';
 // Type/Interface definitions
 type WallpaperEffect = (element: HTMLElement | null) => () => void;
 
-interface VantaSettings {
+export interface VantaSettings {
   baseColor: number;
   highlightColor: number;
   midtoneColor: number;
