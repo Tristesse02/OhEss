@@ -1,5 +1,10 @@
 import { useState } from 'react';
-import type { SessionContextState } from 'types/contexts/session';
+import type { Dispatch, SetStateAction } from 'react';
+
+export interface SessionContextState {
+  themeName: string;
+  setThemeName: Dispatch<SetStateAction<string>>;
+}
 
 const useSessionContextState = (): SessionContextState => {
   const [themeName, setThemeName] = useState('');

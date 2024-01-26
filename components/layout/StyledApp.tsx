@@ -3,9 +3,12 @@ import themes from "styles/theme";
 import GlobalStyle from "styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { SessionConsumer } from "contexts/session";
-import type { StyledAppProps } from "types/components/pages/StyledApp";
 
-const StyledApp = ({ children }: StyledAppProps): React.JSX.Element => (
+const StyledApp = ({
+  children
+}: {
+  children: React.ReactNode;
+}): React.JSX.Element => (
   <SessionConsumer>
     {({ themeName }) => (
       /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */

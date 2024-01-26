@@ -1,6 +1,15 @@
 /* eslint-disable @typescript-eslint/promise-function-async */
 import dynamic from 'next/dynamic';
-import type { Processes } from 'types/contexts/process';
+import type { ComponentType } from 'react';
+
+export interface Process {
+  Component: ComponentType; // [EN]: used to be "ComponentType"
+  hasWindow?: boolean;
+  title: string;
+  icon: string;
+}
+
+export type Processes = Record<string, Process>;
 
 export const HelloWorld = {
   Component: dynamic(() => import('components/apps/HelloWorld')),
