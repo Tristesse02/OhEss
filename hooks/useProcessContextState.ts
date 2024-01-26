@@ -18,6 +18,7 @@ export interface ProcessContextState {
   mapProcesses: ProcessMap;
   maximized: (id: string) => void;
   minimized: (id: string) => void;
+  processes: Processes;
 }
 
 // Function implementation
@@ -45,7 +46,7 @@ const useProcessContextState = (): ProcessContextState => {
     setProcesses(minimizeProcess(id));
   }, []);
 
-  return { open, close, mapProcesses, maximized, minimized }; // This is what Process provides to its childrens
+  return { open, close, mapProcesses, maximized, minimized, processes }; // This is what Process provides to its childrens
 };
 
 export default useProcessContextState;

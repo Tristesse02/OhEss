@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { useProcesses } from "contexts/process";
 import StyledTaskbarEntry from "styles/components/system/Taskbar/StyledTaskbarEntry";
+import Button from "styles/common/Button";
 
 interface TaskbarEntryProps {
+  id: string;
   icon: string;
   title: string;
 }
@@ -9,16 +12,22 @@ interface TaskbarEntryProps {
 /**
  * A JSX component that renders a taskbar entry.
  */
-const TaskbarEntry = ({
-  icon = "/Lau.ico",
-  title = "Hello World"
-}: TaskbarEntryProps): JSX.Element => (
-  <StyledTaskbarEntry>
-    <figure>
-      <img src={icon} alt={title} />
-      <figcaption>{title}</figcaption>
-    </figure>
-  </StyledTaskbarEntry>
-);
+const TaskbarEntry = ({ icon, id, title }: TaskbarEntryProps): JSX.Element => {
+  const { minimized } = useProcesses();
+  const onClick = useCallback(() => {
+    minimized(id);
+  }, [id, minimized]);
+
+  return (
+    <StyledTaskbarEntry>
+      <Button onClick={onClick}>
+        <figure>
+          <img src={icon} alt={title} />
+          <figcaption>{title}</figcaption>
+        </figure>
+      </Button>
+    </StyledTaskbarEntry>
+  );
+};
 
 export default TaskbarEntry;

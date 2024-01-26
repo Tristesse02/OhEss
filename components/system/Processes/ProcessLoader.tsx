@@ -6,7 +6,12 @@ const ProcessLoader = (): JSX.Element => (
   <ProcessConsumer>
     {({ mapProcesses }) =>
       mapProcesses(([id, { Component, hasWindow }]) => (
-        <RenderProcess key={id} Component={Component} hasWindow={hasWindow} />
+        <RenderProcess
+          key={id}
+          Component={Component}
+          hasWindow={hasWindow}
+          id={id}
+        />
       ))
     }
   </ProcessConsumer>
