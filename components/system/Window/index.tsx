@@ -1,5 +1,8 @@
 import React from "react";
+import { Rnd } from "react-rnd";
 import Titlebar from "./Titlebar";
+import rndDefaults from "utils/rndDefaults";
+import useResizable from "hooks/useResizable";
 import { useProcesses } from "contexts/process";
 import StyledWindow from "styles/components/system/Window/StyledWindow";
 import type { ProcessComponentProps } from "../Processes/RenderProcess";
@@ -9,14 +12,23 @@ const Window: React.FC<
 > = ({ id, children }): JSX.Element => {
   const {
     processes: {
-      [id]: { minimized }
+      [id]: { maximized, minimized }
     }
   } = useProcesses();
+
+  const { height, width, updateSize } = useResizable(maximized);
   return (
-    <StyledWindow $minimized={minimized}>
-      <Titlebar id={id} />
-      {children}
-    </StyledWindow>
+    <Rnd
+      enableResizing={!(maximized ?? false)}
+      size={{ height, width }}
+      onResizeStop={updateSize}
+      {...rndDefaults}
+    >
+      <StyledWindow $minimized={minimized}>
+        <Titlebar id={id} />
+        {children}
+      </StyledWindow>
+    </Rnd>
   );
 };
 
