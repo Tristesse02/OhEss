@@ -23,7 +23,7 @@ const Window: React.FC<
     <Rnd
       enableResizing={!(maximized ?? false)}
       size={{ height, width }}
-      onResizeStop={updateSize}
+      onResize={updateSize}
       onDragStop={updatePosition}
       position={{ x, y }}
       {...rndDefaults}
