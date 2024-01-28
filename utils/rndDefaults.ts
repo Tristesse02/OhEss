@@ -6,6 +6,7 @@ interface RndDefaultProps {
   dragHandleClassName: string;
   enableUserSelectHack: boolean;
   resizeHandleStyles: HandleStyles;
+  style: React.CSSProperties;
 }
 
 const rndDefaults: RndDefaultProps = {
@@ -62,6 +63,9 @@ const rndDefaults: RndDefaultProps = {
       height: '12px',
       cursor: 'nesw-resize'
     }
+  },
+  style: {
+    zIndex: 1
   }
 };
 
