@@ -1,4 +1,13 @@
-const rndDefaults = {
+import type { HandleStyles } from 'react-rnd';
+
+interface RndDefaultProps {
+  cancel: string;
+  dragHandleClassName: string;
+  enableUserSelectHack: boolean;
+  resizeHandleStyles: HandleStyles;
+}
+
+const rndDefaults: RndDefaultProps = {
   cancel: '.cancel',
   dragHandleClassName: 'handle',
   enableUserSelectHack: false,
