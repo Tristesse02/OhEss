@@ -20,10 +20,11 @@ const Window: React.FC<
     useDraggableAndResizable(maximized);
   return (
     <Rnd
+      disableDragging={maximized ?? false}
       enableResizing={!(maximized ?? false)}
       size={{ height, width }}
-      onResize={updateSize}
       onDragStop={updatePosition}
+      onResize={updateSize}
       position={{ x, y }}
       {...rndDefaults}
     >
