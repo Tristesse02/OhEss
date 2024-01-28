@@ -1,3 +1,4 @@
+import Image from "styles/common/Image";
 import Button from "styles/common/Button";
 import React, { useCallback } from "react";
 import { useProcesses } from "contexts/process";
@@ -34,7 +35,7 @@ const Titlebar = ({ id }: TitlebarProps): JSX.Element => {
     <StyledTitlebar className="handle">
       <h1>
         <figure>
-          <img src={icon} alt={title}></img>
+          <Image src={icon} alt={title} />
           <figcaption>{title}</figcaption>
         </figure>
       </h1>

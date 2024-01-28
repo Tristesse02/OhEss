@@ -1,3 +1,4 @@
+import Image from "styles/common/Image";
 import Button from "styles/common/Button";
 import React, { useCallback } from "react";
 import useFileInfo from "hooks/useFileInfo";
@@ -30,7 +31,7 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
     <StyledFileEntry>
       <Button onClick={useDoubleClick(onClick)}>
         <figure>
-          <img src={icon} alt={name} />
+          <Image src={icon} alt={name} />
           <figcaption>{pid}</figcaption>{" "}
           {/* should have been {name} instead of pid */}
         </figure>
