@@ -1,7 +1,8 @@
+import React from "react";
 import Image from "styles/common/Image";
 import Button from "styles/common/Button";
-import React, { useCallback } from "react";
 import { useProcesses } from "contexts/process";
+import useWindowActions from "hooks/useWindowActions";
 import { CloseIcon, MaximizeIcon, MinimizeIcon } from "../icons";
 import StyledTitlebar from "styles/components/system/Window/StyledTitlebar";
 
@@ -11,25 +12,12 @@ interface TitlebarProps {
 
 const Titlebar = ({ id }: TitlebarProps): JSX.Element => {
   const {
-    minimized,
-    maximized,
-    close,
     processes: {
       [id]: { icon, title }
     }
   } = useProcesses();
 
-  const onMinimize = useCallback(() => {
-    minimized(id);
-  }, [minimized, id]);
-
-  const onMaximize = useCallback(() => {
-    maximized(id);
-  }, [maximized, id]);
-
-  const onClose = useCallback(() => {
-    close(id);
-  }, [close, id]);
+  const { onClose, onMaximize, onMinimize } = useWindowActions(id);
 
   return (
     <StyledTitlebar className="handle">
