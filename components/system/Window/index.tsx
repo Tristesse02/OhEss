@@ -2,9 +2,8 @@ import React from "react";
 import { Rnd } from "react-rnd";
 import Titlebar from "./Titlebar";
 import rndDefaults from "utils/rndDefaults";
-import useResizable from "hooks/useResizable";
-import useDraggable from "utils/useDraggable";
 import { useProcesses } from "contexts/process";
+import useDraggableAndResizable from "hooks/useDraggableAndResizable";
 import StyledWindow from "styles/components/system/Window/StyledWindow";
 import type { ProcessComponentProps } from "../Processes/RenderProcess";
 
@@ -17,8 +16,8 @@ const Window: React.FC<
     }
   } = useProcesses();
 
-  const { x, y, updatePosition } = useDraggable(maximized);
-  const { height, width, updateSize } = useResizable(maximized);
+  const { x, y, updatePosition, height, width, updateSize } =
+    useDraggableAndResizable(maximized);
   return (
     <Rnd
       enableResizing={!(maximized ?? false)}
