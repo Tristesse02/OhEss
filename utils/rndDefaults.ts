@@ -5,6 +5,8 @@ interface RndDefaultProps {
   cancel: string;
   dragHandleClassName: string;
   enableUserSelectHack: boolean;
+  minHeight: string;
+  minWidth: string;
   resizeHandleStyles: HandleStyles;
   style: React.CSSProperties;
 }
@@ -14,6 +16,8 @@ const rndDefaults: RndDefaultProps = {
   cancel: '.cancel',
   dragHandleClassName: 'handle',
   enableUserSelectHack: false,
+  minHeight: '30px',
+  minWidth: '170px',
   resizeHandleStyles: {
     left: {
       cursor: 'ew-resize',
