@@ -32,7 +32,7 @@ const StyledTitlebar = styled.header`
       width: 45px;
 
       &:hover {
-        background-color: rgb(26, 26, 26);
+        background-color: rgb(50, 50, 50);
 
         &.close {
           background-color: rgb(232, 17, 35);
