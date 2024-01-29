@@ -53,7 +53,6 @@ const useDraggableAndResizable = (maximized = false): DraggableAndResizable => {
     [sizes.taskbar.height]
   );
 
-  console.log(window.innerHeight - taskbarHeight);
   return {
     updateSize,
     updatePosition,
