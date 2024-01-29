@@ -8,11 +8,17 @@ declare module 'styled-components' {
     colors: {
       backgroundColor: string;
       highlight: string;
-      text: string;
       startButton: string;
       taskbar: string;
-      window: string;
       taskbarHover: string;
+      text: string;
+      titlebar: {
+        background: string;
+        backgroundHover: string;
+        closeHover: string;
+        text: string;
+      };
+      window: string;
     };
     formats: {
       date: Intl.DateTimeFormatOptions;
@@ -39,6 +45,14 @@ declare module 'styled-components' {
           maxWidth: string;
         };
         height: string;
+      };
+      titlebar: {
+        buttonIconWidth: string;
+        buttonWidth: string;
+        fontSize: string;
+        height: string;
+        iconMargin: string;
+        iconSize: string;
       };
     };
     wallpaper?: WallpaperEffect;
