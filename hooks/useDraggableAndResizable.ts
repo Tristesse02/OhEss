@@ -53,7 +53,7 @@ const useDraggableAndResizable = (maximized = false): DraggableAndResizable => {
     x: maximized ? 0 : x,
     y: maximized ? 0 : y,
     width: maximized ? '100%' : width,
-    height: maximized ? `${window.innerHeight - taskbarHeight}px` : height // TODO: Subtract taskbar height
+    height: maximized ? `${window.innerHeight - taskbarHeight}px` : height
   };
 };
 
