@@ -35,6 +35,13 @@ declare module 'styled-components' {
         fontSize: string;
         width: string;
       };
+      fileManager: {
+        columnGap: string;
+        gridEntryHeight: string;
+        gridEntryWidth: string;
+        padding: string;
+        rowGap: string;
+      };
       startButton: {
         iconSize: string;
         width: string;

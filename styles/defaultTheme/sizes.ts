@@ -3,6 +3,13 @@ const sizes = {
     fontSize: '12px',
     width: '76px'
   },
+  fileManager: {
+    columnGap: '1px',
+    gridEntryHeight: '74px',
+    gridEntryWidth: '70px',
+    padding: '5px 0',
+    rowGap: '28px'
+  },
   startButton: {
     iconSize: '19px',
     width: '36px'
