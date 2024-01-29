@@ -2,8 +2,9 @@ import { useTheme } from 'styled-components';
 import type { Position, RndResizeCallback } from 'react-rnd';
 import type { DraggableEventHandler } from 'react-draggable';
 import React, { useCallback, useMemo, useState } from 'react';
+import { DEFAULT_WINDOW_POSITION, DEFAULT_WINDOW_SIZE } from 'utils/constants';
 
-interface Size {
+export interface Size {
   height: string;
   width: string;
 }
@@ -18,15 +19,11 @@ interface Draggable extends Position {
 
 type DraggableAndResizable = Resizable & Draggable;
 
-const defaultWindowSize = { height: '200px', width: '250px' };
-
-const defaultWindowPosition = { x: 0, y: 0 };
-
 const useDraggableAndResizable = (maximized = false): DraggableAndResizable => {
   const { sizes } = useTheme();
-  const [{ height, width }, setSize] = useState<Size>(defaultWindowSize);
+  const [{ height, width }, setSize] = useState<Size>(DEFAULT_WINDOW_SIZE);
   const [{ x, y }, setPosition] = React.useState<Position>(
-    defaultWindowPosition
+    DEFAULT_WINDOW_POSITION
   );
   const updatePosition = useCallback<DraggableEventHandler>(
     (_event, { x: positionX, y: positionY }) => {

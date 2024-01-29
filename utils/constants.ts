@@ -1,3 +1,10 @@
+import type { Position } from 'react-rnd';
+import type { Size } from 'hooks/useDraggableAndResizable';
+
+export const DEFAULT_WINDOW_SIZE: Size = { height: '200px', width: '250px' };
+
+export const DEFAULT_WINDOW_POSITION: Position = { x: 0, y: 0 };
+
 export const MILLIS_PER_SECOND = 1000;
 
 export const IMAGE_FILE_EXTENSIONS = [
