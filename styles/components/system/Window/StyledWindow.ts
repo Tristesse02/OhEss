@@ -5,12 +5,14 @@ export interface StyledWindowProps {
 }
 
 const StyledWindow = styled.section<StyledWindowProps>`
-  background-color: ${({ theme }) => theme.colors.window};
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  background-color: ${({ theme }) => theme.colors.window.background};
+  box-shadow: ${({ theme }) => theme.colors.window.shadow};
   display: ${({ $minimized = false }) =>
     $minimized ?? false ? 'none' : 'block'};
   height: 100%;
-  outline: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  outline: ${({ theme }) =>
+    `${theme.sizes.window.outline} solid ${theme.colors.window.outline}`};
   position: absolute;
   width: 100%;
 `;
