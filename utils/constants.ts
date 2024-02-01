@@ -1,5 +1,5 @@
+import type { Size } from 'hooks/useResizable';
 import type { Position } from 'react-rnd';
-import type { Size } from 'hooks/useDraggableAndResizable';
 
 export const DEFAULT_WINDOW_SIZE: Size = { height: '200px', width: '250px' };
 
