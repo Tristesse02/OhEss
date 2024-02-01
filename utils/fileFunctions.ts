@@ -20,6 +20,13 @@ export const getShortcut = async (
     });
   });
 
+export const getIconByFileExtension = (_extension: string): string => {
+  switch (_extension) {
+    default:
+      return 'icons/unknown.ico';
+  }
+};
+
 export const getProcessByFileExtension = (_extension: string): string => {
   return '';
 };

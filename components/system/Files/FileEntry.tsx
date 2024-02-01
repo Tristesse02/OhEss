@@ -32,7 +32,7 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
       <Button onClick={useDoubleClick(onClick)}>
         <figure>
           <Image src={icon} alt={name} />
-          <figcaption>{pid}</figcaption>{" "}
+          <figcaption>{name}</figcaption>{" "}
           {/* should have been {name} instead of pid */}
         </figure>
       </Button>

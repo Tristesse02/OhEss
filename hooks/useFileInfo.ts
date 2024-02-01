@@ -2,7 +2,11 @@ import { IMAGE_FILE_EXTENSIONS } from 'utils/constants';
 import { useEffect, useState } from 'react';
 import { extname } from 'path';
 import { useFileSystem } from 'contexts/fileSystem';
-import { getProcessByFileExtension, getShortcut } from 'utils/fileFunctions';
+import {
+  getIconByFileExtension,
+  getProcessByFileExtension,
+  getShortcut
+} from 'utils/fileFunctions';
 
 interface FileInfo {
   icon: string;
@@ -10,33 +14,37 @@ interface FileInfo {
 }
 
 const useFileInfo = (path: string): FileInfo => {
-  const [icon, setIcon] = useState('');
-  const [pid, setPid] = useState('');
+  const [info, setInfo] = useState<FileInfo>({
+    icon: '',
+    pid: ''
+  });
   const { fs } = useFileSystem();
 
   useEffect(() => {
     if (fs !== null) {
       const extension = extname(path);
+      const getInfoByFileExtension = (): void => {
+        setInfo({
+          icon: getIconByFileExtension(extension),
+          pid: getProcessByFileExtension(extension)
+        });
+      };
 
       if (extension === '.url') {
         getShortcut(path, fs)
-          .then(({ URL, IconFile }) => {
-            setIcon(IconFile);
-            setPid(URL);
+          .then(({ URL: pid, IconFile: icon }) => {
+            setInfo({ icon, pid });
           })
-          .catch((error) => {
-            console.error(error);
-          });
+          .catch(getInfoByFileExtension);
       } else if (IMAGE_FILE_EXTENSIONS.includes(extension)) {
-        setIcon(path);
-        setPid('ImageViewer');
+        setInfo({ icon: path, pid: 'ImageViewer' });
       } else {
-        setPid(getProcessByFileExtension(extension));
+        getInfoByFileExtension();
       }
     }
   }, [fs, path]);
 
-  return { icon, pid };
+  return info;
 };
 
 export default useFileInfo;
