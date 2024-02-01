@@ -15,6 +15,8 @@ export const initialFileSystemContextState: FileSystemContextState = {
 };
 
 export const initialSessionContextState: SessionContextState = {
+  setThemeName: () => undefined,
+  setWindowStates: () => undefined,
   themeName: '',
-  setThemeName: () => undefined
+  windowStates: {}
 };

@@ -1,7 +1,6 @@
 import React from "react";
-import { Rnd } from "react-rnd";
-import useRnd from "hooks/useRnd";
 import Titlebar from "./Titlebar";
+import RndWindow from "./RndWindow";
 import { useProcesses } from "contexts/process";
 import StyledWindow from "styles/components/system/Window/StyledWindow";
 import type { ProcessComponentProps } from "../Processes/RenderProcess";
@@ -13,18 +12,17 @@ interface WindowProps extends ProcessComponentProps {
 const Window = ({ id, children }: WindowProps): JSX.Element => {
   const {
     processes: {
-      [id]: { maximized, minimized }
+      [id]: { minimized }
     }
   } = useProcesses();
 
-  const rndProps = useRnd(maximized);
   return (
-    <Rnd {...rndProps}>
+    <RndWindow id={id}>
       <StyledWindow $minimized={minimized}>
         <Titlebar id={id} />
         {children}
       </StyledWindow>
-    </Rnd>
+    </RndWindow>
   );
 };
 
