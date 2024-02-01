@@ -38,7 +38,7 @@ module.exports = {
       version: 'detect'
     }
   },
-  ignorePatterns: ['next-env.d.ts', '.eslintrc.js'],
+  ignorePatterns: ['next-env.d.ts', '.eslintrc.js', 'public'],
   rules: {
     endOfLine: 'off',
     'no-extra-semi': 'error',
