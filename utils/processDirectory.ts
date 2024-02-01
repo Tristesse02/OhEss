@@ -4,6 +4,7 @@ import type { ComponentType } from 'react';
 import type { ProcessComponentProps } from 'components/system/Processes/RenderProcess';
 
 export interface Process {
+  autoSizing?: boolean;
   Component: ComponentType<ProcessComponentProps>;
   hasWindow?: boolean;
   maximized?: boolean;

@@ -66,6 +66,16 @@ const StyledTitlebar = styled.header`
           transition: background-color 0.25s ease;
         }
       }
+
+      &:disabled {
+        svg {
+          fill: rgb(140, 140, 140);
+        }
+
+        &:hover {
+          background-color: inherit;
+        }
+      }
     }
   }
 `;
