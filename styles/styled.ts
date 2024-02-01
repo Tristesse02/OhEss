@@ -7,6 +7,12 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       backgroundColor: string;
+      fileEntry: {
+        background: string;
+        border: string;
+        text: string;
+        textShadow: string;
+      };
       highlight: string;
       startButton: string;
       taskbar: {
@@ -34,6 +40,11 @@ declare module 'styled-components' {
       clock: {
         fontSize: string;
         width: string;
+      };
+      fileEntry: {
+        fontSize: string;
+        iconSize: string;
+        letterSpacing: string;
       };
       fileManager: {
         columnGap: string;
