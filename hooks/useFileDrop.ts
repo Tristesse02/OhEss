@@ -18,7 +18,7 @@ const useFileDrop = (directory: string, getFiles: () => void): FileDrop => {
       haltDragEvent(event);
 
       const file = event.dataTransfer?.files[0];
-      if (!file) {
+      if (file == null) {
         console.error('No file was dropped');
         return;
       }
