@@ -17,17 +17,17 @@ interface FileEntryProps {
  * @returns
  */
 const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
-  const { icon, pid } = useFileInfo(path);
+  const { icon, pid, url } = useFileInfo(path);
   const { open } = useProcesses();
 
   const onClick = useCallback(() => {
-    // console.log("huh?", pid);
-    open(pid);
-  }, [pid, open]);
+    open(pid, url);
+  }, [pid, open, url]);
 
   // const onDeactivate = useCallback(() => {
   //   close(pid);
   // }, [pid, close]);
+
   return (
     <StyledFileEntry>
       <Button onClick={useDoubleClick(onClick)}>

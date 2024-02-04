@@ -11,6 +11,7 @@ export interface Process {
   minimized?: boolean;
   title: string;
   icon: string;
+  url?: string;
 }
 
 export type Processes = Record<string, Process>;

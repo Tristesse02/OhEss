@@ -2,8 +2,9 @@ import type { FSModule } from 'browserfs/dist/node/core/FS';
 import ini from 'ini';
 
 interface Shortcut {
-  URL: string;
+  BaseURL: string;
   IconFile: string;
+  URL: string;
 }
 
 export const getShortcut = async (
@@ -12,9 +13,8 @@ export const getShortcut = async (
 ): Promise<Shortcut> =>
   await new Promise((resolve) => {
     fs.readFile(path, (_error, contents = Buffer.from('')) => {
-      const { InternetShortcut = { URL: '', IconFile: '' } } = ini.parse(
-        contents.toString()
-      );
+      const { InternetShortcut = { BaseURL: '', IconFile: '', URL: '' } } =
+        ini.parse(contents.toString());
 
       resolve(InternetShortcut as Shortcut);
     });

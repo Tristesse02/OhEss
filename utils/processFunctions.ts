@@ -7,10 +7,23 @@ export const closeProcess =
     remainingProcesses;
 
 export const openProcess =
-  (processId: string) => (currentProcesses: Processes) =>
-    processId in currentProcesses
-      ? currentProcesses
-      : { ...currentProcesses, [processId]: processDirectory[processId] };
+  (processId: string, url: string) =>
+  (currentProcesses: Processes): Processes => {
+    const id = url !== '' ? `${processId}_${url}` : processId;
+
+    const processExists = id in currentProcesses;
+    const isValidProcessId = processId in processDirectory;
+
+    if (processExists || !isValidProcessId) {
+      return currentProcesses;
+    }
+
+    // Otherwise, create a new process entry
+    return {
+      ...currentProcesses,
+      [id]: { ...processDirectory[processId], url }
+    };
+  };
 
 export const toggleProcessSetting =
   (processId: string, setting: 'minimized' | 'maximized') =>

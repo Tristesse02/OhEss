@@ -13,7 +13,7 @@ type ProcessMap = (
 ) => JSX.Element[];
 
 export interface ProcessContextState {
-  open: (id: string) => void;
+  open: (id: string, url: string) => void;
   close: (id: string) => void;
   mapProcesses: ProcessMap;
   maximized: (id: string) => void;
@@ -34,8 +34,8 @@ const useProcessContextState = (): ProcessContextState => {
     setProcesses(closeProcess(id));
   }, []);
 
-  const open = useCallback((id: string) => {
-    setProcesses(openProcess(id));
+  const open = useCallback((id: string, url: string) => {
+    setProcesses(openProcess(id, url));
   }, []);
 
   const maximized = useCallback((id: string) => {
