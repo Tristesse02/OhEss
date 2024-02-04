@@ -21,7 +21,6 @@ const RndWindow = ({ children, id }: RndWindowProps): JSX.Element => {
   const rndProps = useRnd(id, maximized);
   const { setWindowStates } = useSession();
 
-  console.log(rndRef);
   useEffect(() => {
     const { current } = rndRef ?? {};
 
