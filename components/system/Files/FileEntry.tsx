@@ -19,8 +19,9 @@ interface FileEntryProps {
 const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
   const { icon, pid } = useFileInfo(path);
   const { open } = useProcesses();
+
   const onClick = useCallback(() => {
-    console.log("huh?", pid);
+    // console.log("huh?", pid);
     open(pid);
   }, [pid, open]);
 
