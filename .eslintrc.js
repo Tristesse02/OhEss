@@ -2,7 +2,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 'latest',
-    project: process.env.ESLINT_PROJECT_PATH || 'd:/ohEss/OhEss/tsconfig.json' //  This absolute path is different from github repo
+    project: process.env.ESLINT_PROJECT_PATH || './tsconfig.json' //  This absolute path is different from github repo
   },
   parser: '@typescript-eslint/parser',
   env: {
