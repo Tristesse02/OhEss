@@ -23,7 +23,7 @@ const useV86 = (
   const { fs } = useFileSystem();
 
   useEffect(() => {
-    if (emulator !== null) {
+    if (emulator === null) {
       fs?.readFile(url, (_error, contents = Buffer.from('')) => {
         loadScript('/libs/v86/libv86.js', () => {
           const isISO = extname(url).toLowerCase() === '.iso';
