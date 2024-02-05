@@ -30,9 +30,7 @@ type V86Config = typeof v86Config & {
   screen_container: HTMLDivElement | null;
 };
 
-interface V86Constructor {
-  new (config: V86Config): V86Starter;
-}
+type V86Constructor = new (config: V86Config) => V86Starter;
 
 export type WindowWithV86Starter = Window &
   typeof globalThis & { V86Starter: V86Constructor };
