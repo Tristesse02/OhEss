@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "downlevelIteration": true,
     "strict": true,
     "noEmit": true,
     "allowJs": true,

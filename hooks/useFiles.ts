@@ -17,7 +17,6 @@ const useFiles = (directory: string): Files => {
   const { fs } = useFileSystem();
   const getFiles = useCallback(() => {
     if (fs !== null) {
-      console.log(directory);
       fs.readdir(directory, (_error, contents = []) => {
         setFiles(contents);
       });

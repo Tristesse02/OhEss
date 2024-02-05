@@ -1,9 +1,9 @@
 import React from "react";
 import FileEntry from "./FileEntry";
 import useFiles from "hooks/useFiles";
+import useFileDrop from "hooks/useFileDrop";
 import { basename, extname, resolve } from "path";
 import StyledFileManager from "styles/components/system/Files/StyledFileManager";
-import useFileDrop from "hooks/useFileDrop";
 
 interface FileManagerProps {
   directory: string;

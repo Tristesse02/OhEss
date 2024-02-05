@@ -5,6 +5,7 @@ import type { ProcessComponentProps } from 'components/system/Processes/RenderPr
 
 export interface Process {
   autoSizing?: boolean;
+  backgroundColor?: string;
   Component: ComponentType<ProcessComponentProps>;
   hasWindow?: boolean;
   maximized?: boolean;
@@ -35,6 +36,13 @@ const processDirectory: Processes = {
     hasWindow: true,
     icon: '/geomydash.ico',
     title: 'Geomy Dash'
+  },
+  V86: {
+    autoSizing: true,
+    Component: dynamic(() => import('components/apps/V86')),
+    hasWindow: true,
+    icon: '/icons/v86.ico',
+    title: 'v86'
   }
 };
 
