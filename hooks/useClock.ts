@@ -7,6 +7,7 @@ const useClock = (): Date => {
     setNow(new Date());
   }, []);
   useSyncedClock(updateClock);
+  console.log("fixing useClock")
   return now;
 };
 
