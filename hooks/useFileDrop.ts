@@ -13,6 +13,7 @@ interface FileDrop {
 
 const useFileDrop = (directory: string, getFiles: () => void): FileDrop => {
   const { fs } = useFileSystem();
+  console.log('fixing useFileDrop');
   const onDrop = useCallback(
     (event: React.DragEvent<HTMLElement>) => {
       haltDragEvent(event);
